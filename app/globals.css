@@ -10,6 +10,11 @@
   --color-blue: #77a4d4;
   --color-yellow: #fbb040;
   --color-pink: #ff85a5;
+
+  --color-background: #f7efe9;
+  --color-border: var(--color-dark);
+  --color-heading: var(--color-red);
+  --color-text: var(--color-dark);
 }
 
 html {
