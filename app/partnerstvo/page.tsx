@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <div>
-      <h1>Klub Ada</h1>
+      <h1>Partnerstvo</h1>
     </div>
   );
 }
