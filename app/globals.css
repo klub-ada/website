@@ -51,10 +51,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-strong {
-  font-weight: 500;
-}
-
 *,
 *::before,
 *::after {

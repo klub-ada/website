@@ -6,9 +6,9 @@ const baseHeading = tv({
   base: "font-heading m-0 break-words",
   variants: {
     size: {
-      md: "text-headingMdMobile md:text-headingMd font-bold",
-      lg: "text-headingLgMobile md:text-headingLg font-bold",
-      xl: "text-headingXlMobile md:text-headingXl font-bold",
+      xl: "text-[36px] md:text-[56px] leading-[120%] font-bold",
+      lg: "text-3xl md:text-5xl leading-[120%] font-bold",
+      md: "text-text-2xl md:text-4xl leading-[120%] font-bold",
     },
     textAlign: {
       left: "text-left",
@@ -56,7 +56,7 @@ export const Heading = forwardRef(
     {
       as,
       children,
-      size = "md",
+      size = "lg",
       color = "black",
       textAlign = "left",
       shouldTruncate,

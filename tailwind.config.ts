@@ -41,48 +41,8 @@ const config: Config = {
       },
       fontFamily: {
         heading: ["Courier", "monospace"],
-        body: ["Anaheim", "sans-serif"],
+        paragraph: ["Anaheim", "sans-serif"],
         button: ["Anaheim", "sans-serif"],
-      },
-      fontSize: {
-        headingXl: [
-          "56px",
-          {
-            lineHeight: "120%",
-            letterSpacing: "-2%",
-          },
-        ],
-        headingXlMobile: [
-          "32px",
-          {
-            lineHeight: "120%",
-            letterSpacing: "-2%",
-          },
-        ],
-        headingLg: [
-          "48px",
-          {
-            lineHeight: "120%",
-          },
-        ],
-        headingLgMobile: [
-          "28px",
-          {
-            lineHeight: "120%",
-          },
-        ],
-        headingMd: [
-          "36px",
-          {
-            lineHeight: "120%",
-          },
-        ],
-        headingMdMobile: [
-          "24px",
-          {
-            lineHeight: "120%",
-          },
-        ],
       },
       boxShadow: {
         button: "-4px 4px var(--color-black)",
