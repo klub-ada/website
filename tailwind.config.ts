@@ -9,8 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        dark: "var(--color-dark)",
+        light: "var(--color-light)",
+        red: "var(--color-red)",
+        redLight: "var(--color-red-light)",
+        blue: "var(--color-blue)",
+        yellow: "var(--color-yellow)",
+        pink: "var(--color-pink)",
+
+        background: "var(--color-background)",
+        border: "var(--color-border)",
+        heading: "var(--color-heading)",
+        text: "var(--color-text)",
+      },
+      fontFamily: {
+        heading: ["Courier", "monospace"],
+        body: ["Anaheim", "sans-serif"],
+        button: ["Anaheim", "sans-serif"],
       },
     },
   },
