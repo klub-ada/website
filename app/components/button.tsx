@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { ElementType, forwardRef } from "react";
 import { ForwardRefComponent, PropsOf } from "../utils/polymorphic";
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 
@@ -23,6 +23,14 @@ export interface ButtonOptions {
    * @default 'button'
    */
   type?: "button" | "submit" | "reset";
+  /**
+   * Icon to display after the button label
+   */
+  iconRight?: ElementType;
+  /**
+   * Icon to display before the button label
+   */
+  iconLeft?: ElementType;
 }
 
 type PolymorphicButton = ForwardRefComponent<"button", ButtonOptions>;
@@ -37,6 +45,8 @@ export const Button = forwardRef(
       variant = "secondary",
       isDisabled = false,
       disabled: hasHtmlDisabledProp,
+      iconRight: IconRight,
+      iconLeft: IconLeft,
       ...rest
     },
     forwardedRef
@@ -51,8 +61,9 @@ export const Button = forwardRef(
         className="h-11 py-2 px-5 flex shrink-0 relative justify-center items-center gap-1.5 select-none rounded-lg border border-dark text-light hover:text-dark bg-red font-button font-medium"
         {...rest}
       >
+        {IconLeft && <IconLeft className="w-4 h-4" />}
         {children}
-        <ArrowLongRightIcon className="w-4 h-4" />
+        {IconRight && <IconRight className="w-4 h-4" />}
       </button>
     );
   }
