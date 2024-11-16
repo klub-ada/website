@@ -5,7 +5,7 @@ import { Paragraph } from "./paragraph";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 
 const baseContentButton = tv({
-  base: "max-w-64 max-h-44 grid grid-cols-2 shrink-0 p-6 relative gap-y-6 select-none rounded-2xl font-button font-medium text-center whitespace-nowrap outline-none border border-black text-white hover:text-black bg-red hover:shadow-button hover:mt-minus-4 hover:ml-1",
+  base: "max-w-64 max-h-44 grid grid-cols-2 shrink-0 p-6 relative gap-y-6 select-none rounded-2xl font-button font-medium text-center whitespace-nowrap outline-none border border-black text-white hover:text-black bg-red hover:shadow-button top-0 left-0 hover:top-[-4px] hover:left-1",
   variants: {
     disabled: {
       true: "cursor-not-allowed bg-gray300 border border-gray700 text-white",
