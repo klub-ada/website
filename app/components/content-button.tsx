@@ -5,8 +5,12 @@ import { Paragraph } from "./paragraph";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 
 const baseContentButton = tv({
-  base: "max-w-64 max-h-44 grid grid-cols-2 shrink-0 p-6 relative gap-y-6 select-none rounded-2xl font-button font-medium text-center whitespace-nowrap outline-none border border-black text-white hover:text-black bg-red hover:shadow-button top-0 left-0 hover:top-[-4px] hover:left-1",
+  base: "max-w-64 max-h-44 grid grid-cols-2 shrink-0 p-6 relative gap-y-6 select-none rounded-2xl font-button font-medium text-center whitespace-nowrap outline-none border border-black enabled:hover:shadow-button top-0 left-0 enabled:hover:top-[-4px] enabled:hover:left-1",
   variants: {
+    color: {
+      red: "bg-red",
+      blue: "bg-blue",
+    },
     disabled: {
       true: "cursor-not-allowed bg-gray300 border border-gray700 text-white",
     },
@@ -25,6 +29,11 @@ interface ContentButtonOptions {
    */
   type?: "button" | "submit" | "reset";
   /**
+   * The color of the content button
+   * @default 'red'
+   */
+  color?: "red" | "blue";
+  /**
    * Label to display on the content button
    */
   label: string;
@@ -41,6 +50,7 @@ export const ContentButton = forwardRef(
     {
       children,
       type = "button",
+      color = "red",
       isDisabled = false,
       disabled: hasHtmlDisabledProp,
       label,
@@ -55,7 +65,7 @@ export const ContentButton = forwardRef(
         ref={forwardedRef}
         type={type}
         disabled={shouldBeDisabled}
-        className={baseContentButton({ disabled: shouldBeDisabled })}
+        className={baseContentButton({ disabled: shouldBeDisabled, color })}
         {...rest}
       >
         <div className="col-span-1">
