@@ -5,7 +5,7 @@ import { Paragraph } from "./paragraph";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 
 const baseContentButton = tv({
-  base: "max-w-64 max-h-44 grid grid-cols-2 shrink-0 p-6 relative gap-y-6 select-none rounded-2xl font-button font-medium text-center whitespace-nowrap outline-none border border-black enabled:hover:shadow-button top-0 left-0 enabled:hover:top-[-4px] enabled:hover:left-1",
+  base: "max-w-64 grid grid-cols-2 shrink-0 p-6 relative gap-y-6 select-none rounded-2xl font-button font-medium outline-none border border-black enabled:hover:shadow-button top-0 left-0 enabled:hover:top-[-4px] enabled:hover:left-1 text-start",
   variants: {
     color: {
       red: "bg-red",
@@ -73,8 +73,22 @@ export const ContentButton = forwardRef(
             {label}
           </Paragraph>
         </div>
-        <div className="col-span-2 flex justify-self-end border border-black rounded-lg p-3">
-          <ArrowRightIcon className="w-4 h-4 text-black" />
+        <div className="col-span-2 flex justify-between items-center gap-6">
+          {children ? (
+            <Paragraph
+              size="lg"
+              className="line-clamp-2"
+              weight="medium"
+              textAlign="left"
+            >
+              {children}
+            </Paragraph>
+          ) : (
+            <div />
+          )}
+          <div className="border border-black rounded-lg p-3">
+            <ArrowRightIcon className="w-4 h-4 text-black" />
+          </div>
         </div>
       </button>
     );
