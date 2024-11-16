@@ -10,9 +10,10 @@ export const baseButton = tv({
       md: "text-lg h-11 py-2 px-5",
     },
     variant: {
-      primary: "border border-dark text-light hover:text-dark bg-red",
-      secondary: "border border-dark text-dark bg-light hover:bg-redLight",
+      primary: "border border-black text-white hover:text-black bg-red",
+      secondary: "border border-black text-black bg-white hover:bg-red200",
     },
+    disabled: "cursor-not-allowed ",
   },
 });
 
