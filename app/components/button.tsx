@@ -12,7 +12,8 @@ export const baseButton = tv({
     variant: {
       primary:
         "border border-black text-white hover:text-black bg-red hover:shadow-button hover:mt-minus-4 hover:ml-1",
-      secondary: "border border-black text-black bg-white hover:bg-red200",
+      secondary:
+        "border border-black text-black bg-white hover:shadow-button hover:mt-minus-4 hover:ml-1",
       disabled:
         "cursor-not-allowed bg-gray300 border border-gray700 text-white",
     },
