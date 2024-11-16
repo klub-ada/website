@@ -10,10 +10,12 @@ export const baseButton = tv({
       md: "text-lg h-11 py-2 px-5",
     },
     variant: {
-      primary: "border border-black text-white hover:text-black bg-red",
+      primary:
+        "border border-black text-white hover:text-black bg-red hover:shadow-button hover:mt-minus-4 hover:ml-1",
       secondary: "border border-black text-black bg-white hover:bg-red200",
+      disabled:
+        "cursor-not-allowed bg-gray300 border border-gray700 text-white",
     },
-    disabled: "cursor-not-allowed ",
   },
 });
 
@@ -73,7 +75,10 @@ export const Button = forwardRef(
         ref={forwardedRef}
         type={type}
         disabled={shouldBeDisabled}
-        className={baseButton({ size, variant })}
+        className={baseButton({
+          size,
+          variant: shouldBeDisabled ? "disabled" : variant,
+        })}
         {...rest}
       >
         {IconLeft && <IconLeft className="w-4 h-4" />}

@@ -46,6 +46,12 @@ const config: Config = {
         body: ["Anaheim", "sans-serif"],
         button: ["Anaheim", "sans-serif"],
       },
+      boxShadow: {
+        button: "-4px 4px var(--color-black)",
+      },
+      spacing: {
+        "minus-4": "-4px",
+      },
     },
   },
   plugins: [],
