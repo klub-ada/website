@@ -26,6 +26,7 @@ export const Link = forwardRef(
       <NextLink
         ref={forwardedRef}
         href={href}
+        className="text-lg font-medium font-paragraph text-black hover:text-red select-none outline-none whitespace-nowrap"
         {...externalProps}
         {...restProps}
       >
