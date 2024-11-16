@@ -1,13 +1,27 @@
 import { ElementType, forwardRef } from "react";
 import { ForwardRefComponent, PropsOf } from "../utils/polymorphic";
-import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
+import { tv } from "tailwind-variants";
+
+export const baseButton = tv({
+  base: "inline-flex shrink-0 relative justify-center items-center gap-1.5 select-none rounded-lg font-button font-medium text-center whitespace-nowrap outline-none",
+  variants: {
+    size: {
+      sm: "text-sm h-8 py-1 px-4",
+      md: "text-lg h-11 py-2 px-5",
+    },
+    variant: {
+      primary: "border border-dark text-light hover:text-dark bg-red",
+      secondary: "border border-dark text-dark bg-light hover:bg-redLight",
+    },
+  },
+});
 
 export interface ButtonOptions {
   /**
    * Sets the size of the button
    * @default 'md'
    */
-  size?: "md";
+  size?: "sm" | "md";
   /**
    * Sets the style variant of the button
    * @default 'secondary'
@@ -58,7 +72,7 @@ export const Button = forwardRef(
         ref={forwardedRef}
         type={type}
         disabled={shouldBeDisabled}
-        className="h-11 py-2 px-5 flex shrink-0 relative justify-center items-center gap-1.5 select-none rounded-lg border border-dark text-light hover:text-dark bg-red font-button font-medium"
+        className={baseButton({ size, variant })}
         {...rest}
       >
         {IconLeft && <IconLeft className="w-4 h-4" />}
