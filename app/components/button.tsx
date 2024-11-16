@@ -2,7 +2,7 @@ import { ElementType, forwardRef } from "react";
 import { ForwardRefComponent, PropsOf } from "../utils/polymorphic";
 import { tv } from "tailwind-variants";
 
-export const baseButton = tv({
+const baseButton = tv({
   base: "inline-flex shrink-0 relative justify-center items-center gap-1.5 select-none rounded-lg font-button font-medium text-center whitespace-nowrap outline-none",
   variants: {
     size: {
@@ -20,7 +20,7 @@ export const baseButton = tv({
   },
 });
 
-export interface ButtonOptions {
+interface ButtonOptions {
   /**
    * Sets the size of the button
    * @default 'md'
