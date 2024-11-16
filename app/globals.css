@@ -33,8 +33,8 @@
 
   --color-background: var(--color-beige);
   --color-border: var(--color-black);
-  --color-heading: var(--color-red);
-  --color-text: var(--color-black);
+  --color-text-default: var(--color-black);
+  --color-text-light: var(--color-white);
 }
 
 html {
