@@ -3,7 +3,7 @@ import { ForwardRefComponent, PropsOf } from "../utils/polymorphic";
 import { tv } from "tailwind-variants";
 
 const baseParagraph = tv({
-  base: "font-paragraph m-0 break-words",
+  base: "font-paragraph m-0 break-words text-wrap",
   variants: {
     size: {
       xs: "text-xs",
