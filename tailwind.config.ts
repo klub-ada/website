@@ -47,9 +47,6 @@ const config: Config = {
       boxShadow: {
         button: "-4px 4px var(--color-black)",
       },
-      spacing: {
-        "minus-4": "-4px",
-      },
     },
   },
   plugins: [],

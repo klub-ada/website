@@ -11,11 +11,12 @@ const baseButton = tv({
     },
     variant: {
       primary:
-        "border border-black text-white hover:text-black bg-red hover:shadow-button hover:mt-minus-4 hover:ml-1",
+        "border border-black text-white enabled:hover:text-black bg-red enabled:hover:shadow-button top-0 left-0 enabled:hover:top-[-4px] enabled:hover:left-1",
       secondary:
-        "border border-black text-black bg-white hover:shadow-button hover:mt-minus-4 hover:ml-1",
-      disabled:
-        "cursor-not-allowed bg-gray300 border border-gray700 text-white",
+        "border border-black text-black bg-white enabled:hover:shadow-button top-0 left-0 enabled:hover:top-[-4px] enabled:hover:left-1",
+    },
+    disabled: {
+      true: "cursor-not-allowed bg-gray300 border border-gray700 text-white",
     },
   },
 });
@@ -60,7 +61,7 @@ export const Button = forwardRef(
       children,
       type = "button",
       size = "md",
-      variant = "secondary",
+      variant = "primary",
       isDisabled = false,
       disabled: hasHtmlDisabledProp,
       iconRight: IconRight,
@@ -78,7 +79,8 @@ export const Button = forwardRef(
         disabled={shouldBeDisabled}
         className={baseButton({
           size,
-          variant: shouldBeDisabled ? "disabled" : variant,
+          variant,
+          disabled: shouldBeDisabled,
         })}
         {...rest}
       >
