@@ -33,7 +33,7 @@ export function Navbar() {
           <Link href="/partnerstvo">Partnerstva</Link>
         </li>
       </ol>
-      <Button>Pridruži se nam</Button>
+      <Button className="hidden md:block">Pridruži se nam</Button>
     </nav>
   );
 }
