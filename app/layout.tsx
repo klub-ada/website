@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "./components/navbar";
+import { anaheim } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Klub Ada",
@@ -14,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${anaheim.className} antialiased`}>
         <Navbar />
         {children}
       </body>
