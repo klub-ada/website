@@ -2,7 +2,7 @@ import NextLink from "next/link";
 import { ForwardRefComponent, PropsOf } from "../utils/polymorphic";
 import { forwardRef } from "react";
 
-interface LinkOptions {
+export interface LinkOptions {
   /**
    * The URL to link to.
    */
