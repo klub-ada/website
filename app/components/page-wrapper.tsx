@@ -1,12 +1,15 @@
 type PageWrapperProps = {
   children: string | JSX.Element | JSX.Element[];
-  bgColor?: "white" | "beige" | "red" | "blue";
+  bgColor?: "bg-white" | "bg-beige" | "bg-red" | "bg-blue";
 };
 
-export function PageWrapper({ children, bgColor = "beige" }: PageWrapperProps) {
+export function PageWrapper({
+  children,
+  bgColor = "bg-beige",
+}: PageWrapperProps) {
   return (
     <section
-      className={`px-5 md:px-20 py-4 md:py-6 bg-${bgColor} box-border max-w-full`}
+      className={`px-5 md:px-20 py-4 md:py-6 ${bgColor} box-border max-w-full`}
     >
       {children}
     </section>
