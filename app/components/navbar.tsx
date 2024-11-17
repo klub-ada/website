@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "./button";
 import { Link } from "./link";
+import { NavbarMenu } from "./navbar-menu";
 
 export function Navbar() {
   return (
@@ -36,6 +37,7 @@ export function Navbar() {
       <div className="hidden md:block">
         <Button>Pridruži se nam</Button>
       </div>
+      <NavbarMenu />
     </nav>
   );
 }
