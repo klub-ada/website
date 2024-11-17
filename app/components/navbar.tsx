@@ -20,7 +20,7 @@ export function Navbar() {
         className="block md:hidden"
         alt="Klub ada logo"
       />
-      <ol className="items-center gap-10 hidden md:flex">
+      <ol className="items-center gap-6 hidden md:flex">
         <li>
           <Link href="/o-nas">O nas</Link>
         </li>
@@ -35,7 +35,7 @@ export function Navbar() {
         </li>
       </ol>
       <div className="hidden md:block">
-        <Button>Pridruži se nam</Button>
+        <Button size="sm">Pridruži se nam</Button>
       </div>
       <NavbarMenu />
     </nav>
