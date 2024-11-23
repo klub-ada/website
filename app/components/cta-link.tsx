@@ -6,7 +6,7 @@ import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import NextLink from "next/link";
 
 const baseCtaLink = tv({
-  base: "max-w-64 grid grid-cols-2 shrink-0 p-6 relative gap-y-6 select-none rounded-2xl font-button font-medium outline-none border border-black hover:shadow-button top-0 left-0 hover:top-[-4px] hover:left-1 text-start",
+  base: "w-full grid grid-cols-[1fr_40px] shrink-0 p-6 relative gap-y-6 select-none rounded-2xl font-button font-medium outline-none border border-black hover:shadow-button top-0 left-0 hover:top-[-4px] hover:left-1 text-start",
   variants: {
     color: {
       red: "bg-red",
