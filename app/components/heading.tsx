@@ -6,7 +6,7 @@ const baseHeading = tv({
   base: "font-heading m-0 break-words",
   variants: {
     size: {
-      xl: "text-[36px] md:text-[56px] leading-[120%] font-bold",
+      xl: "text-[36px] md:text-[52px] leading-[120%] font-bold",
       lg: "text-3xl md:text-5xl leading-[120%] font-bold",
       md: "text-text-2xl md:text-4xl leading-[120%] font-bold",
     },
