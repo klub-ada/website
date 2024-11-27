@@ -6,7 +6,7 @@ import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import NextLink from "next/link";
 
 const baseCtaLink = tv({
-  base: "flex flex-col grow p-6 gap-6 min-h-40 h-full select-none rounded-2xl font-button font-medium outline-none border border-black hover:shadow-button top-0 left-0 hover:top-[-4px] hover:left-1 text-start",
+  base: "flex flex-col grow p-6 gap-6 justify-between min-h-40 h-full select-none rounded-2xl font-button font-medium outline-none border border-black hover:shadow-button top-0 left-0 hover:top-[-4px] hover:left-1 text-start",
   variants: {
     color: {
       red: "bg-red",
@@ -55,15 +55,13 @@ export const CtaLink = forwardRef(
         className={baseCtaLink({ color })}
         {...rest}
       >
-        <div className="max-w-[80%] md:max-w-[50%]">
+        <div className="max-w-[80%] lg:max-w-[50%]">
           <Paragraph size="xl" weight="bold" className="line-clamp-2">
             {label}
           </Paragraph>
         </div>
-        <div className="grow justify-self-end">
-          <div className="justify-self-end border border-black rounded-lg p-3">
-            <ArrowRightIcon className="w-4 h-4 text-black" />
-          </div>
+        <div className="self-end border border-black rounded-lg p-2 md:p-3">
+          <ArrowRightIcon className="w-4 h-4 text-black" />
         </div>
       </NextLink>
     );
