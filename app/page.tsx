@@ -9,12 +9,17 @@ export default function Page() {
     <PageWrapper bgColor="bg-red">
       <div className="flex flex-col py-20">
         <div className="flex flex-col gap-16">
-          <div className="max-w-xl">
-            <Heading size="lg">{"Pridi na naš naslednji dogodek!"}</Heading>
+          <div className="flex flex-col gap-8">
+            <div className="max-w-xl">
+              <Heading size="lg">{"Pridi na naš naslednji dogodek!"}</Heading>
+            </div>
+            <div className="">
+              <Button size="md" variant="secondary">Vsi dogodki</Button>
+            </div>
           </div>
           <Card bgColor="bg-white">
-            <div className="flex flex-rox gap-8">
-              <div className="block grow">
+            <div className="flex flex-rox gap-8 justify-start">
+              <div className="block">
                 <Image
                   src="/assets/dogodki.jpg"
                   width={500}
@@ -23,7 +28,7 @@ export default function Page() {
                   className="rounded-2xl object-fill"
                 />
               </div>
-              <div className="flex flex-col gap-12">
+              <div className="flex flex-col gap-12 justify-center max-w-xl">
                 <div className="flex flex-col gap-3">
                   <Paragraph size="lg">{"23. 10. 2024 ob 17:00 @ FRI v P04"}</Paragraph>
                   <Heading size="sm">{"Kako se pripravim na tehnični intervju?"}</Heading>
@@ -38,9 +43,6 @@ export default function Page() {
               </div>
             </div>
           </Card>
-          <div className="">
-            <Button size="md" variant="secondary">Vsi dogodki</Button>
-          </div>
         </div>
       </div>
     </PageWrapper>
