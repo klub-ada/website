@@ -8,8 +8,8 @@ import { CtaLink } from "./components/cta-link";
 export function Hero() {
   return (
     <PageWrapper>
-      <div className="flex flex-col gap-4 md:flex-row md:items-stretch">
-        <div className="flex flex-col gap-4 shrink-1">
+      <div className="flex flex-col gap-4 md:flex-row">
+        <div className="flex flex-col gap-4 shrink-1 basis-1/2 lg:basis-2/5">
           <Card bgColor="bg-white">
             <div className="flex flex-col gap-8">
               <div className="hidden lg:block">
@@ -43,7 +43,7 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <div className="hidden md:block grow">
+        <div className="hidden md:block grow basis-1/2 lg:basis-3/5">
           <Image
             src="/assets/hero.jpg"
             width={865}
