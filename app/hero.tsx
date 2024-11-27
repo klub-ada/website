@@ -35,10 +35,10 @@ export function Hero() {
             />
           </div>
           <div className="flex flex-row gap-4">
-            <div className="grow shrink-0">
+            <div className="basis-1/2">
               <CtaLink label="Pridi na dogodek" color="red" href="/" />
             </div>
-            <div className="grow shrink-0">
+            <div className="basis-1/2">
               <CtaLink label="Postani partner" color="blue" href="/" />
             </div>
           </div>
@@ -46,8 +46,8 @@ export function Hero() {
         <div className="hidden md:block grow">
           <Image
             src="/assets/hero.jpg"
-            width={900}
-            height={600}
+            width={865}
+            height={500}
             alt="Hero picture"
             className="rounded-2xl w-full h-full object-cover"
           />
