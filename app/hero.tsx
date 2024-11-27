@@ -25,13 +25,13 @@ export function Hero() {
               </Paragraph>
             </div>
           </Card>
-          <div className="block md:hidden grow">
+          <div className="block md:hidden">
             <Image
               src="/assets/hero.jpg"
               width={768}
               height={150}
               alt="Hero picture"
-              className="rounded-2xl max-h-80 object-cover"
+              className="rounded-2xl max-h-52 object-cover"
             />
           </div>
           <div className="flex flex-row gap-4">
