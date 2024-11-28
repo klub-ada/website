@@ -19,6 +19,11 @@ const baseParagraph = tv({
       bold: "font-bold",
       extraBold: "font-extrabold",
     },
+    lineHeight: {
+      tight: "leading-5",
+      none: "leading-6",
+      normal: "leading-7",
+    },
     textAlign: {
       left: "text-left",
       center: "text-center",
@@ -51,6 +56,11 @@ interface ParagraphOptions {
    * Sets the color of the paragraph
    * @default 'black'
    */
+  lineHeight?: "tight" | "none" | "normal";
+  /**
+   * Sets the line hight of the paragraph
+   * @default 'tight'
+   */
   color?: "black" | "white";
   /**
    * Truncates the paragraph if true
@@ -73,6 +83,7 @@ export const Paragraph = forwardRef(
       children,
       size = "md",
       color = "black",
+      lineHeight = "none",
       textAlign = "left",
       weight = "regular",
       shouldTruncate,
@@ -86,6 +97,7 @@ export const Paragraph = forwardRef(
         className={baseParagraph({
           size,
           color,
+          lineHeight,
           weight,
           textAlign,
           truncate: shouldTruncate,
