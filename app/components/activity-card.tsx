@@ -7,7 +7,6 @@ type ActivityCardProps = {
     description: string;
     imageSrc: string;
     imageAlt: string;
-    className: string;
 }
 
 export function ActivityCard({ title, description, imageSrc, imageAlt, className = "" }: ActivityCardProps) {
@@ -34,7 +33,7 @@ export function ActivityCard({ title, description, imageSrc, imageAlt, className
                 width={400}
                 height={400}
                 alt={imageAlt}
-                className="rounded-2xl w-full h-full object-cover"
+                className="h-80 w-full object-cover md:h-full md:w-full rounded-2xl"
             />
         </article>
     )
