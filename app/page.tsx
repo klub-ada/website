@@ -28,7 +28,7 @@ export default function Page() {
                 className="h-80 w-full object-cover md:h-full md:w-full rounded-2xl"
               />
             </div>
-            <div className="flex flex-col py-4 gap-6 md:gap-12 justify-center max-w-xl flex-grow">
+            <div className="flex flex-col pt-4 gap-6 md:gap-12 justify-center max-w-xl flex-grow">
               <div className="flex flex-col gap-3">
                 <Paragraph size="lg" weight="regular">{"23. 10. 2024 ob 17:00 @ FRI v P04"}</Paragraph>
                 <Heading size="sm">{"Kako se pripravim na tehnični intervju?"}</Heading>
