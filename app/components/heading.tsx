@@ -10,7 +10,7 @@ const baseHeading = tv({
       lg: "text-3xl md:text-5xl leading-[120%] font-bold",
       md: "text-text-2xl md:text-4xl leading-[120%] font-bold",
       sm: "text-2xl md:text-[32px] leading-[120%] font-bold",
-      sx: "text-xl md:text-2xl leading-[120%] font-bold",
+      xs: "text-xl md:text-2xl leading-[120%] font-bold",
     },
     textAlign: {
       left: "text-left",
