@@ -7,10 +7,10 @@ const baseParagraph = tv({
   variants: {
     size: {
       xs: "text-xs",
-      sm: "text-sm",
-      md: "text-base",
-      lg: "text-lg",
-      xl: "text-xl",
+      sm: "text-xs md:text-sm",
+      md: "text-sm md:text-base",
+      lg: "text-base md:text-lg",
+      xl: "text-lg md:text-xl",
     },
     weight: {
       regular: "font-normal",

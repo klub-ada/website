@@ -15,18 +15,8 @@ export function ActivityCard({ title, description, imageSrc, imageAlt, className
         className={'flex flex-col gap-6 bg-white rounded-2xl border border-black p-6 xl:p-8 ${className}'}
         >
             <div className="flex flex-col gap-4">
-                <div className="hidden lg:block">
-                    <Heading size="sm">{title}</Heading>
-                </div>
-                <div className="block lg:hidden">
-                    <Heading size="xs">{title}</Heading>
-                </div>
-                <div className="hidden lg:block">
-                    <Paragraph size="lg" weight="regular">{description}</Paragraph>
-                </div>
-                <div className="block lg:hidden">
-                    <Paragraph size="md" weight="regular">{description}</Paragraph>
-                </div>
+                <Heading size="sm">{title}</Heading>
+                <Paragraph size="lg" weight="regular">{description}</Paragraph>
             </div>
             <Image
                 src={imageSrc}
