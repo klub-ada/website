@@ -6,11 +6,11 @@ const baseHeading = tv({
   base: "font-heading m-0 break-words",
   variants: {
     size: {
-      xl: "text-[36px] md:text-[52px] leading-[120%] font-bold",
-      lg: "text-3xl md:text-5xl leading-[120%] font-bold",
-      md: "text-text-2xl md:text-4xl leading-[120%] font-bold",
+      xl: "text-4xl sm:text-[44px] md:text-[52px] leading-[120%] font-bold",
+      lg: "text-3xl sm:text-4xl md:text-5xl leading-[120%] font-bold",
+      md: "text-2xl sm:text-3xl md:text-4xl leading-[120%] font-bold",
       sm: "text-2xl md:text-[32px] leading-[120%] font-bold",
-      sx: "text-xl md:text-2xl leading-[120%] font-bold",
+      xs: "text-xl md:text-2xl leading-[120%] font-bold",
     },
     textAlign: {
       left: "text-left",

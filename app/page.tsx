@@ -4,9 +4,12 @@ import { Heading } from "./components/heading";
 import { Paragraph } from "./components/paragraph";
 import Image from "next/image";
 import { Button } from "./components/button";
+import { Hero } from "./hero";
+
 export default function Page() {
   return (
     <>
+    <Hero />
     <PageWrapper bgColor="bg-red">
       <div className="flex flex-col py-10 md:py-20 gap-8 md:gap-16">
         <div className="flex flex-col gap-8">
