@@ -12,6 +12,15 @@
   --color-yellow: #fbb040;
   --color-pink: #ff85a5;
 
+  --color-blue-100: #f1f6fb;
+  --color-blue-200: #E4EDF6;
+  --color-blue-300: #C9DBEE;
+  --color-blue-400: #ADC8E5;
+  --color-blue-500: #92B6DD;
+  --color-blue-600: var(--color-blue);
+  --color-blue-700: #5F83AA;
+  --color-blue-800: #47627F;
+
   --color-red-100: #ffeeee;
   --color-red-200: #ffdddd;
   --color-red-300: #ffbcbc;
