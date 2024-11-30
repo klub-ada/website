@@ -8,11 +8,13 @@ type CardProps = {
       | "bg-pink"
       | "bg-red100"
       | "bg-blue100";
+    hasBorder?: boolean;
   };
-  export function Card({ children, bgColor = "bg-beige" }: CardProps) {
+  export function Card({ children, bgColor = "bg-beige", hasBorder = true }: CardProps) {
     return (
         <article
-          className={`p-6 md:p-8 ${bgColor} rounded-2xl border border-black`}
+          className={`p-6 md:p-8 ${bgColor} rounded-2xl ${
+        hasBorder ? "border border-black" : "" }`}
         >
           {children}
         </article>
