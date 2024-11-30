@@ -11,7 +11,7 @@ export const baseButton = tv({
     },
     variant: {
       primary:
-        "border border-black text-white enabled:hover:text-black bg-red enabled:hover:shadow-button top-0 left-0 enabled:hover:top-[-4px] enabled:hover:left-1",
+        "border border-black text-white enabled:hover:text-white bg-red enabled:hover:shadow-button top-0 left-0 enabled:hover:top-[-4px] enabled:hover:left-1",
       secondary:
         "border border-black text-black bg-white enabled:hover:shadow-button top-0 left-0 enabled:hover:top-[-4px] enabled:hover:left-1",
     },
