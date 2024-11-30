@@ -7,10 +7,10 @@ const baseParagraph = tv({
   variants: {
     size: {
       xs: "text-xs",
-      sm: "text-sm",
-      md: "text-base",
-      lg: "text-lg",
-      xl: "text-xl",
+      sm: "text-xs md:text-sm",
+      md: "text-sm md:text-base",
+      lg: "text-base md:text-lg",
+      xl: "text-lg md:text-xl",
     },
     weight: {
       regular: "font-normal",
@@ -18,6 +18,11 @@ const baseParagraph = tv({
       semiBold: "font-semibold",
       bold: "font-bold",
       extraBold: "font-extrabold",
+    },
+    lineHeight: {
+      tight: "leading-5",
+      none: "leading-6",
+      normal: "leading-7",
     },
     textAlign: {
       left: "text-left",
@@ -51,6 +56,11 @@ interface ParagraphOptions {
    * Sets the color of the paragraph
    * @default 'black'
    */
+  lineHeight?: "tight" | "none" | "normal";
+  /**
+   * Sets the line hight of the paragraph
+   * @default 'tight'
+   */
   color?: "black" | "white";
   /**
    * Truncates the paragraph if true
@@ -73,6 +83,7 @@ export const Paragraph = forwardRef(
       children,
       size = "md",
       color = "black",
+      lineHeight = "none",
       textAlign = "left",
       weight = "regular",
       shouldTruncate,
@@ -88,6 +99,7 @@ export const Paragraph = forwardRef(
           baseParagraph({
             size,
             color,
+            lineHeight,
             weight,
             textAlign,
             truncate: shouldTruncate,
