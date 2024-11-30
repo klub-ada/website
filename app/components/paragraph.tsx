@@ -76,6 +76,7 @@ export const Paragraph = forwardRef(
       textAlign = "left",
       weight = "regular",
       shouldTruncate,
+      className,
       ...rest
     },
     forwardedRef
@@ -83,13 +84,15 @@ export const Paragraph = forwardRef(
     return (
       <p
         ref={forwardedRef}
-        className={baseParagraph({
-          size,
-          color,
-          weight,
-          textAlign,
-          truncate: shouldTruncate,
-        })}
+        className={
+          baseParagraph({
+            size,
+            color,
+            weight,
+            textAlign,
+            truncate: shouldTruncate,
+          }) + ` ${className}`
+        }
         {...rest}
       >
         {children}
