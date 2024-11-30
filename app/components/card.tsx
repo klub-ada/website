@@ -13,7 +13,7 @@ type CardProps = {
   export function Card({ children, bgColor = "bg-beige", hasBorder = true }: CardProps) {
     return (
         <article
-          className={`p-6 md:p-8 ${bgColor} rounded-2xl ${
+          className={`p-6 md:p-8 ${bgColor} grow rounded-2xl ${
         hasBorder ? "border border-black" : "" }`}
         >
           {children}
