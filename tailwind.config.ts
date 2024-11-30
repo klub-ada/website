@@ -22,11 +22,16 @@ const config: Config = {
         red300: "var(--color-red-300)",
         red400: "var(--color-red-400)",
         red500: "var(--color-red-500)",
-        red600: "var(--color-red-600)",
         red700: "var(--color-red-700)",
         red800: "var(--color-red-800)",
 
         blue100: "var(--color-blue-100)",
+        blue200: "var(--color-blue-200)",
+        blue300: "var(--color-blue-300)",
+        blue400: "var(--color-blue-400)",
+        blue500: "var(--color-blue-500)",
+        blue700: "var(--color-blue-700)",
+        blue800: "var(--color-blue-800)",
 
         gray100: "var(--color-gray-100)",
         gray200: "var(--color-gray-200)",
