@@ -10,21 +10,21 @@ export function TopBlogs() {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
       imageSrc: "/assets/coffee&&code.png",
-      imageAlt: "/",
+      imageAlt: "Image of coffee&&code",
     },
     {
       title: "Naslov bloga 2",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
       imageSrc: "/assets/coffee&&code.png",
-      imageAlt: "/",
+      imageAlt: "Image of coffee&&code",
     },
     {
       title: "Naslov bloga 3",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
       imageSrc: "/assets/coffee&&code.png",
-      imageAlt: "/",
+      imageAlt: "Image of coffee&&code",
     },
   ];
 
@@ -33,9 +33,7 @@ export function TopBlogs() {
       <div className="flex flex-col py-10 md:py-20 gap-8 md:gap-16">
         <div className="flex flex-col gap-8">
           <div className="max-w-sm md:max-w-2xl">
-            <Heading size="lg">
-              {"Kaj pravijo naše članice in partnerji"}
-            </Heading>
+            <Heading size="lg">Kaj pravijo naše članice in partnerji</Heading>
           </div>
           <div className="">
             <Button size="md" variant="primary">
@@ -44,7 +42,7 @@ export function TopBlogs() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row flex-wrap gap-4">
+        <div className="flex flex-col md:flex-row md:flex-nowrap gap-4">
           {blogs.map(({ title, description, imageSrc, imageAlt }) => {
             return (
               <div className="basis-1/3">
