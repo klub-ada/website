@@ -11,7 +11,7 @@ export function Hero() {
       <div className="flex flex-col gap-4 md:flex-row">
         <div className="flex flex-col gap-4 shrink-1 basis-1/2 lg:basis-2/5">
           <Card bgColor="bg-white">
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col h-full justify-between gap-8">
               <Heading size="xl">{"Skupnost žensk v tehnologiji"}</Heading>
               <Paragraph size="xl">
                 {
