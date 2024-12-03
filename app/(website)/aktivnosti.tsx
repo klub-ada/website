@@ -1,45 +1,17 @@
+import { client } from "@/sanity/lib/client";
 import { ActivityCard } from "../components/activity-card";
 import { Heading } from "../components/heading";
 import { PageWrapper } from "../components/page-wrapper";
 import { Paragraph } from "../components/paragraph";
-export function Aktivnosti() {
-  const activities = [
-    {
-      title: "Mesečni dogodki",
-      description:
-        "Na mesečnih srečanjih obravnavamo različne karierne in tehnične teme, govorimo o mehkih veščinah, gostimo strokovnjakinje iz industrije ter se družimo in izmenjujemo ideje v sproščenem okolju ob prigrizkih in pijači.",
-      imageSrc: "/assets/dogodki.jpg",
-      imageAlt: "Mesečni dogodki",
-    },
-    {
-      title: "Coffee&&Code",
-      description:
-        "Serija neformalnih druženj ob kavi, kjer skupaj programiramo na projektih, ki si jih vsaka izbere sama. Lahko rešuješ domačo nalogo, delaš na projektu, slediš tutorialu ali poiščeš motivacijo za začetek novega projekta.",
-      imageSrc: "/assets/coffee&&code.png",
-      imageAlt: "Coffee&&Code",
-    },
-    {
-      title: "Discord skupnost",
-      description:
-        "Skupnost je varen prostor za komunikacijo, kjer izmenjujemo ideje, razpravljamo o zanimivih temah, delimo dogodke, možnosti za zaposlitev, koristne izobraževalne vire in priložnosti za osebni ter karierni razvoj.",
-      imageSrc: "/assets/discord.png",
-      imageAlt: "Discord skupnost",
-    },
-    {
-      title: "Knjižni klub",
-      description:
-        "Srečanje za vse, ki poleg tehnologije uživamo tudi v branju in razpravah. Vsakih nekaj mesecev v Discord skupini izberemo knjigo, vezano na teme, kot so tehnologija, vloga žensk v družbi, osebnostna rast in razvoj kariere.",
-      imageSrc: "/assets/knjizni-klub.png",
-      imageAlt: "Knjižni klub",
-    },
-    {
-      title: "Novičnik",
-      description:
-        "Preko novičnika delimo vabila na prihajajoče dogodke in povzetke dogodkov, uporabne nasvete, povezave do drugih koristnih virov, kot so hackathoni, karierni dogodki, zaposlitvene priložnosti in še več.",
-      imageSrc: "/assets/novicnik.png",
-      imageAlt: "Novičnik",
-    },
-  ];
+import { SanityDocument } from "next-sanity";
+import imageLoader from "../utils/image-loader";
+
+const ACTIVITIES_QUERY = `*[
+  _type == "activity"
+]`;
+
+export async function Aktivnosti() {
+  const activities = await client.fetch<SanityDocument[]>(ACTIVITIES_QUERY);
 
   return (
     <PageWrapper>
@@ -52,14 +24,15 @@ export function Aktivnosti() {
             </Paragraph>
           </div>
 
-          {activities.map(({ title, description, imageSrc, imageAlt }) => {
+          {activities.map(({ name, description, activityImage }) => {
+            const imageSrc = imageLoader(activityImage);
             return (
-              <div className="basis-1/3" key={title}>
+              <div className="basis-1/3" key={name}>
                 <ActivityCard
-                  title={title}
+                  title={name}
                   description={description}
                   imageSrc={imageSrc}
-                  imageAlt={imageAlt}
+                  imageAlt={activityImage.alt}
                 />
               </div>
             );
