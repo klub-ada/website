@@ -1,7 +1,7 @@
-import { ActivityCard } from "./components/activity-card";
-import { Heading } from "./components/heading";
-import { PageWrapper } from "./components/page-wrapper";
-import { Paragraph } from "./components/paragraph";
+import { ActivityCard } from "../components/activity-card";
+import { Heading } from "../components/heading";
+import { PageWrapper } from "../components/page-wrapper";
+import { Paragraph } from "../components/paragraph";
 export function Aktivnosti() {
   const activities = [
     {
@@ -54,7 +54,7 @@ export function Aktivnosti() {
 
           {activities.map(({ title, description, imageSrc, imageAlt }) => {
             return (
-              <div className="basis-1/3">
+              <div className="basis-1/3" key={title}>
                 <ActivityCard
                   title={title}
                   description={description}

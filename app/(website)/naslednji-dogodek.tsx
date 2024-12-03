@@ -1,20 +1,22 @@
 import Image from "next/image";
-import { Button } from "./components/button";
-import { Heading } from "./components/heading";
-import { PageWrapper } from "./components/page-wrapper";
-import { Card } from "./components/card";
-import { Paragraph } from "./components/paragraph";
+import { Button } from "../components/button";
+import { Heading } from "../components/heading";
+import { PageWrapper } from "../components/page-wrapper";
+import { Card } from "../components/card";
+import { Paragraph } from "../components/paragraph";
 
 export function NaslednjiDogodek() {
-    return (
-        <PageWrapper bgColor="bg-red">
+  return (
+    <PageWrapper bgColor="bg-red">
       <div className="flex flex-col py-10 md:py-20 gap-8 md:gap-16">
         <div className="flex flex-col gap-8">
           <div className="max-w-sm md:max-w-xl">
             <Heading size="lg">{"Pridi na naš naslednji dogodek!"}</Heading>
           </div>
           <div className="">
-            <Button size="md" variant="secondary">Vsi dogodki</Button>
+            <Button size="md" variant="secondary">
+              Vsi dogodki
+            </Button>
           </div>
         </div>
         <Card bgColor="bg-red100">
@@ -30,10 +32,15 @@ export function NaslednjiDogodek() {
             </div>
             <div className="flex flex-col pt-4 gap-6 md:gap-12 justify-center max-w-xl flex-grow">
               <div className="flex flex-col gap-3">
-                <Paragraph size="lg" weight="regular">{"23. 10. 2024 ob 17:00 @ FRI v P04"}</Paragraph>
-                <Heading size="sm">{"Kako se pripravim na tehnični intervju?"}</Heading>
                 <Paragraph size="lg" weight="regular">
-                  {"Nasveti za pripravo na tehnični intervju in oblikovanje CV-ja ter primeri dobrih praks v obliki simulacije tehničnega intervjuja."
+                  {"23. 10. 2024 ob 17:00 @ FRI v P04"}
+                </Paragraph>
+                <Heading size="sm">
+                  {"Kako se pripravim na tehnični intervju?"}
+                </Heading>
+                <Paragraph size="lg" weight="regular">
+                  {
+                    "Nasveti za pripravo na tehnični intervju in oblikovanje CV-ja ter primeri dobrih praks v obliki simulacije tehničnega intervjuja."
                   }
                 </Paragraph>
               </div>
@@ -45,5 +52,5 @@ export function NaslednjiDogodek() {
         </Card>
       </div>
     </PageWrapper>
-    )
+  );
 }
