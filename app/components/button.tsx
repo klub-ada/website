@@ -11,9 +11,9 @@ export const baseButton = tv({
     },
     variant: {
       primary:
-        "border border-black text-white enabled:hover:text-white bg-red enabled:hover:shadow-button top-0 left-0 enabled:hover:top-[-4px] enabled:hover:left-1",
+        "border border-black text-white bg-red text-start transition-all duration-200 ease-in-out transform hover:shadow-button hover:-translate-y-1 hover:translate-x-1",
       secondary:
-        "border border-black text-black bg-white enabled:hover:shadow-button top-0 left-0 enabled:hover:top-[-4px] enabled:hover:left-1",
+        "border border-black text-black bg-white transition-all duration-200 ease-in-out transform hover:shadow-button hover:-translate-y-1 hover:translate-x-1",
     },
     disabled: {
       true: "cursor-not-allowed bg-gray300 border border-gray700 text-white",

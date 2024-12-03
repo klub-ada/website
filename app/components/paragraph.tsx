@@ -54,7 +54,12 @@ interface ParagraphOptions {
   weight?: "regular" | "medium" | "semiBold" | "bold" | "extraBold";
   /**
    * Sets the color of the paragraph
-   * @default 'black'
+   * @default 'medium'
+   */
+  lineHeight?: "tight" | "none" | "normal";
+  /**
+   * Sets the line hight of the paragraph
+   * @default 'tight'
    */
   lineHeight?: "tight" | "none" | "normal";
   /**
@@ -83,10 +88,11 @@ export const Paragraph = forwardRef(
       children,
       size = "md",
       color = "black",
-      lineHeight = "none",
+      lineHeight = "tight",
       textAlign = "left",
-      weight = "regular",
+      weight = "medium",
       shouldTruncate,
+      className,
       ...rest
     },
     forwardedRef
@@ -94,14 +100,16 @@ export const Paragraph = forwardRef(
     return (
       <p
         ref={forwardedRef}
-        className={baseParagraph({
-          size,
-          color,
-          lineHeight,
-          weight,
-          textAlign,
-          truncate: shouldTruncate,
-        })}
+        className={
+          baseParagraph({
+            size,
+            color,
+            lineHeight,
+            weight,
+            textAlign,
+            truncate: shouldTruncate,
+          }) + ` ${className}`
+        }
         {...rest}
       >
         {children}
