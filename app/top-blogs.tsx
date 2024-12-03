@@ -33,11 +33,11 @@ export function TopBlogs() {
       <div className="flex flex-col py-10 md:py-20 gap-8 md:gap-16">
         <div className="flex flex-col gap-8">
           <div className="max-w-sm md:max-w-2xl">
-            <Heading size="lg">Kaj pravijo naše članice in partnerji</Heading>
+            <Heading size="lg">Najnovejši blogi</Heading>
           </div>
           <div className="">
             <Button size="md" variant="primary">
-              Preberi naš blog
+              Preberi vse bloge
             </Button>
           </div>
         </div>
