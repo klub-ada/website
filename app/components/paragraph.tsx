@@ -61,11 +61,6 @@ interface ParagraphOptions {
    * Sets the line hight of the paragraph
    * @default 'tight'
    */
-  lineHeight?: "tight" | "none" | "normal";
-  /**
-   * Sets the line hight of the paragraph
-   * @default 'tight'
-   */
   color?: "black" | "white";
   /**
    * Truncates the paragraph if true
