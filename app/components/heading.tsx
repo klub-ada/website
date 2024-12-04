@@ -62,6 +62,7 @@ export const Heading = forwardRef(
       color = "black",
       textAlign = "left",
       shouldTruncate,
+      className,
       ...rest
     },
     forwardedRef
@@ -70,12 +71,14 @@ export const Heading = forwardRef(
     return (
       <HeadingElement
         ref={forwardedRef}
-        className={baseHeading({
-          size,
-          color,
-          textAlign,
-          truncate: shouldTruncate,
-        })}
+        className={
+          baseHeading({
+            size,
+            color,
+            textAlign,
+            truncate: shouldTruncate,
+          }) + ` ${className}`
+        }
         {...rest}
       >
         {children}
