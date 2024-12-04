@@ -3,7 +3,7 @@ import { NaslednjiDogodek } from "./naslednji-dogodek";
 import { Aktivnosti } from "./aktivnosti";
 import { Reviews } from "./reviews";
 import { TopBlogs } from "./top-blogs";
-import { Footer } from "./components/footer";
+import { Footer } from "./footer";
 export default function Page() {
   return (
     <>

@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { Card } from "./components/card";
-import { Heading } from "./components/heading";
-import { PageWrapper } from "./components/page-wrapper";
-import { Paragraph } from "./components/paragraph";
-import { CtaLink } from "./components/cta-link";
+import { Card } from "../components/card";
+import { Heading } from "../components/heading";
+import { PageWrapper } from "../components/page-wrapper";
+import { Paragraph } from "../components/paragraph";
+import { CtaLink } from "../components/cta-link";
 
 export function Hero() {
   return (
