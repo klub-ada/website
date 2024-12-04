@@ -11,6 +11,8 @@ const baseCtaLink = tv({
     color: {
       red: "bg-red",
       blue: "bg-blue",
+      yellow: "bg-yellow",
+      beige: "bg-beige",
     },
   },
 });
@@ -20,11 +22,15 @@ interface CtaLinkOptions {
    * The color of the cta link
    * @default 'red'
    */
-  color?: "red" | "blue";
+  color?: "red" | "blue" | "yellow" | "beige";
   /**
    * Label to display on the cta link
    */
   label: string;
+  /**
+   * Description
+   */
+  description?: string;
   /**
    * The URL to link to.
    */
@@ -40,7 +46,7 @@ export type CtaLinkProps = PropsOf<CtaLinkComponent>;
 
 export const CtaLink = forwardRef(
   (
-    { color = "red", label, href, isExternal = false, ...rest },
+    { color = "red", label, description, href, isExternal = false, ...rest },
     forwardedRef
   ) => {
     const externalProps = isExternal
@@ -60,8 +66,13 @@ export const CtaLink = forwardRef(
             {label}
           </Paragraph>
         </div>
-        <div className="self-end border border-black rounded-lg p-2 md:p-3">
-          <ArrowRightIcon className="w-4 h-4 text-black" />
+        <div className="flex justify-between">
+          <Paragraph size="md" weight="medium" className="mr-6">
+            {description}
+          </Paragraph>
+          <div className="self-end border border-black rounded-lg p-2 md:p-3">
+            <ArrowRightIcon className="w-4 h-4 text-black" />
+          </div>
         </div>
       </NextLink>
     );
