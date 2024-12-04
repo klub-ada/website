@@ -30,7 +30,7 @@ export function TopBlogs() {
 
   return (
     <PageWrapper bgColor="bg-white">
-      <div className="flex flex-col py-10 md:py-20 gap-8 md:gap-16">
+      <div className="flex flex-col pt-10 md:pt-20 gap-8 md:gap-16">
         <div className="flex flex-col gap-8">
           <div className="max-w-sm md:max-w-2xl">
             <Heading size="lg">Najnovejši blogi</Heading>
