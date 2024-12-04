@@ -1,8 +1,8 @@
-import { Button } from "./components/button";
-import { Card } from "./components/card";
-import { Heading } from "./components/heading";
-import { PageWrapper } from "./components/page-wrapper";
-import { Paragraph } from "./components/paragraph";
+import { Button } from "../components/button";
+import { Card } from "../components/card";
+import { Heading } from "../components/heading";
+import { PageWrapper } from "../components/page-wrapper";
+import { Paragraph } from "../components/paragraph";
 
 export function Reviews() {
   return (

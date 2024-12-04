@@ -1,7 +1,7 @@
-import { BlogCard } from "./components/blog-card";
-import { Button } from "./components/button";
-import { Heading } from "./components/heading";
-import { PageWrapper } from "./components/page-wrapper";
+import { BlogCard } from "../components/blog-card";
+import { Button } from "../components/button";
+import { Heading } from "../components/heading";
+import { PageWrapper } from "../components/page-wrapper";
 
 export function TopBlogs() {
   const blogs = [
