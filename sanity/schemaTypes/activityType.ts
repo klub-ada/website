@@ -1,11 +1,11 @@
-import { PlayIcon } from "@sanity/icons";
+import { BoltIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
 export const activityType = defineType({
   name: "activity",
   title: "Activity",
   type: "document",
-  icon: PlayIcon,
+  icon: BoltIcon,
   fields: [
     defineField({
       name: "name",

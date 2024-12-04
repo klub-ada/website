@@ -10,7 +10,7 @@ export const structure: StructureResolver = (S) =>
       S.divider(),
       S.documentTypeListItem("teamMember").title("Team Members"),
       S.divider(),
-      S.documentTypeListItem("activity").title("Activity"),
+      S.documentTypeListItem("activity").title("Activities"),
       ...S.documentTypeListItems().filter(
         (item) =>
           item.getId() &&
