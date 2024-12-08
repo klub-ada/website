@@ -15,7 +15,7 @@ export async function Aktivnosti() {
 
   return (
     <PageWrapper>
-      <div className="flex flex-col py-10 md:py-20 gap-4">
+      <div className="flex flex-col gap-4">
         <div className="flex flex-col md:flex-row flex-wrap gap-4">
           <div className="flex flex-col gap-4 basis-1/3">
             <Heading size="lg">{"Aktivnosti"}</Heading>

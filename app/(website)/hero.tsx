@@ -7,8 +7,8 @@ import { CtaLink } from "../components/cta-link";
 
 export function Hero() {
   return (
-    <PageWrapper>
-      <div className="flex flex-col gap-4 md:flex-row">
+    <PageWrapper hasNoTopPadding hasNoBottomPadding>
+      <div className="flex flex-col gap-4 md:flex-row pt-4">
         <div className="flex flex-col gap-4 shrink-1 basis-1/2 lg:basis-2/5">
           <Card bgColor="bg-white">
             <div className="flex flex-col h-full justify-between gap-8">
