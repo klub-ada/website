@@ -8,7 +8,7 @@ import { Paragraph } from "../components/paragraph";
 export function NaslednjiDogodek() {
   return (
     <PageWrapper bgColor="bg-red">
-      <div className="flex flex-col py-10 md:py-20 gap-8 md:gap-16">
+      <div className="flex flex-col gap-8 md:gap-16">
         <div className="flex flex-col gap-8">
           <div className="max-w-sm md:max-w-xl">
             <Heading size="lg">{"Pridi na naš naslednji dogodek!"}</Heading>

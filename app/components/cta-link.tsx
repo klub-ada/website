@@ -61,7 +61,7 @@ export const CtaLink = forwardRef(
         className={baseCtaLink({ color })}
         {...rest}
       >
-        <div className="max-w-[80%] lg:max-w-[50%]">
+        <div className="max-w-[95%] lg:max-w-[50%] min-w-[100px]">
           <Paragraph size="xl" weight="bold" className="line-clamp-2">
             {label}
           </Paragraph>
