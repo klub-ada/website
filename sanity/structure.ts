@@ -11,10 +11,11 @@ export const structure: StructureResolver = (S) =>
       S.documentTypeListItem("teamMember").title("Team Members"),
       S.divider(),
       S.documentTypeListItem("activity").title("Activities"),
+      S.documentTypeListItem("event").title("Events"),
       ...S.documentTypeListItems().filter(
         (item) =>
           item.getId() &&
-          !["post", "category", "teamMember", "activity"].includes(
+          !["post", "category", "teamMember", "activity", "event"].includes(
             item.getId()!
           )
       ),
