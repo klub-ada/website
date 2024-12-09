@@ -3,6 +3,7 @@ import { CtaLink } from "./cta-link";
 import { Heading } from "./heading";
 import { PageWrapper } from "./page-wrapper";
 import { Paragraph } from "./paragraph";
+import { Link } from "./link";
 
 export function Footer() {
   return (
@@ -59,7 +60,7 @@ export function Footer() {
                 {"O nas"}
               </Paragraph>
               <div className="flex flex-col gap-2">
-                <Paragraph size="sm">{"Spoznaj Klub Ada"}</Paragraph>
+                <Link href="./page">{"Spoznaj Klub Ada"}</Link>
                 <Paragraph size="sm">{"Zgodovina"}</Paragraph>
                 <Paragraph size="sm">{"Doniraj nam"}</Paragraph>
               </div>
