@@ -1,6 +1,16 @@
 import NextLink from "next/link";
 import { ForwardRefComponent, PropsOf } from "../utils/polymorphic";
 import { forwardRef } from "react";
+import { tv } from "tailwind-variants";
+
+const linkBase = tv({
+  variants: {
+    variant: {
+      sm: "text-sm font-medium text-black hover:text-red select-none outline-none whitespace-nowrap",
+      md: "text-md font-medium text-black hover:text-red select-none outline-none whitespace-nowrap",
+    },
+  },
+});
 
 export interface LinkOptions {
   /**
@@ -11,13 +21,21 @@ export interface LinkOptions {
    * If `true`, the link will open in new tab
    */
   isExternal?: boolean;
+  /**
+   * Sets the style variant of the link element
+   * @default 'md'
+   */
+  variant: "sm" | "md";
 }
 
 type LinkComponent = ForwardRefComponent<"a", LinkOptions>;
 export type LinkProps = PropsOf<LinkComponent>;
 
 export const Link = forwardRef(
-  ({ children, href, isExternal = false, ...restProps }, forwardedRef) => {
+  (
+    { children, href, isExternal = false, variant = "md", ...restProps },
+    forwardedRef
+  ) => {
     const externalProps = isExternal
       ? { target: "_blank", rel: "noopener noreferrer" }
       : {};
@@ -26,7 +44,7 @@ export const Link = forwardRef(
       <NextLink
         ref={forwardedRef}
         href={href}
-        className="text-sm font-medium gray400 hover:text-black select-none outline-none whitespace-nowrap"
+        className={linkBase({ variant })}
         {...externalProps}
         {...restProps}
       >
