@@ -6,8 +6,12 @@ import { tv } from "tailwind-variants";
 const linkBase = tv({
   variants: {
     variant: {
-      sm: "text-sm font-medium text-black hover:text-red select-none outline-none whitespace-nowrap",
-      md: "text-md font-medium text-black hover:text-red select-none outline-none whitespace-nowrap",
+      primary:
+        "text-sm font-medium text-black hover:text-red select-none outline-none whitespace-nowrap",
+      secondary:
+        "text-md font-medium text-black hover:text-red select-none outline-none whitespace-nowrap",
+      tertiary:
+        "text-lg font-medium text-black hover:text-red select-none outline-none whitespace-nowrap",
     },
   },
 });
@@ -25,7 +29,7 @@ export interface LinkOptions {
    * Sets the style variant of the link element
    * @default 'md'
    */
-  variant: "sm" | "md";
+  variant: "primary" | "secondary" | "tertiary";
 }
 
 type LinkComponent = ForwardRefComponent<"a", LinkOptions>;
@@ -33,7 +37,7 @@ export type LinkProps = PropsOf<LinkComponent>;
 
 export const Link = forwardRef(
   (
-    { children, href, isExternal = false, variant = "md", ...restProps },
+    { children, href, isExternal = false, variant = "secondary", ...restProps },
     forwardedRef
   ) => {
     const externalProps = isExternal

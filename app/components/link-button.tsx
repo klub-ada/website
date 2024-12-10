@@ -11,9 +11,9 @@ const linkButtonBase = tv({
   variants: {
     variant: {
       primary:
-        "border border-black text-white bg-red transition-all duration-200 ease-in-out transform hover:shadow-button hover:-translate-y-1 hover:translate-x-1",
+        "border border-black text-white hover:text-black bg-red hover:shadow-button top-0 left-0 hover:top-[-4px] hover:left-1",
       secondary:
-        "border border-black text-black bg-white transition-all duration-200 ease-in-out transform hover:shadow-button hover:-translate-y-1 hover:translate-x-1",
+        "border border-black text-black bg-white hover:shadow-button top-0 left-0 hover:top-[-4px] hover:left-1",
     },
   },
 });
