@@ -4,8 +4,27 @@ import { Heading } from "../components/heading";
 import { PageWrapper } from "../components/page-wrapper";
 import { Card } from "../components/card";
 import { Paragraph } from "../components/paragraph";
+import { SanityDocument } from "next-sanity";
+import { client } from "@/sanity/lib/client";
+import imageLoader from "../utils/image-loader";
+import { LinkButton } from "../components/link-button";
+import { formatDate, formatTime } from "../utils/date";
 
-export function NaslednjiDogodek() {
+const NEXT_EVENT_QUERY = `*[
+  _type == "event" && eventTime >= $today
+] | order(eventTime) [0] {title, description, eventImage, location, applyLink, eventTime}`;
+
+export async function NaslednjiDogodek() {
+  const today = new Date().toISOString().split("T")[0];
+  const nextEvent = await client.fetch<SanityDocument>(NEXT_EVENT_QUERY, {
+    today,
+  });
+  const imageSrc = imageLoader(nextEvent.eventImage);
+  const date = formatDate(nextEvent.eventTime);
+  const time = formatTime(nextEvent.eventTime);
+  const formattedDateAndTime = [date, time].join(" ");
+  console.log(date, time);
+
   return (
     <PageWrapper bgColor="bg-red">
       <div className="flex flex-col gap-8 md:gap-16">
@@ -20,32 +39,30 @@ export function NaslednjiDogodek() {
           </div>
         </div>
         <Card bgColor="bg-red100">
-          <div className="md:flex gap-8">
-            <div className="block">
+          <div className="md:flex gap-8 md:items-center">
+            <div className="h-full lg:basis-2/5">
               <Image
-                src="/assets/dogodki.jpg"
+                src={imageSrc}
                 width={500}
                 height={500}
-                alt="Naslednji dogodek"
-                className="h-80 w-full object-cover md:h-full md:w-full rounded-2xl"
+                alt={nextEvent.eventImage.alt}
+                className="w-full object-cover md:aspect-square rounded-2xl"
               />
             </div>
-            <div className="flex flex-col pt-4 gap-6 md:gap-12 justify-center max-w-xl flex-grow">
+            <div className="flex flex-col pt-4 gap-6 md:gap-12 justify-center grow">
               <div className="flex flex-col gap-3">
                 <Paragraph size="lg" weight="regular">
-                  {"23. 10. 2024 ob 17:00 @ FRI v P04"}
+                  {`${formattedDateAndTime} @ ${nextEvent.location}`}
                 </Paragraph>
-                <Heading size="sm">
-                  {"Kako se pripravim na tehnični intervju?"}
-                </Heading>
-                <Paragraph size="lg" weight="regular">
-                  {
-                    "Nasveti za pripravo na tehnični intervju in oblikovanje CV-ja ter primeri dobrih praks v obliki simulacije tehničnega intervjuja."
-                  }
+                <Heading size="sm">{nextEvent.title}</Heading>
+                <Paragraph size="lg" weight="regular" className="max-w-xl">
+                  {nextEvent.description}
                 </Paragraph>
               </div>
               <div className="">
-                <Button size="md">Pridruži se</Button>
+                <LinkButton size="md" href={nextEvent.applyLink} isExternal>
+                  Pridruži se
+                </LinkButton>
               </div>
             </div>
           </div>

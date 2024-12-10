@@ -3,12 +3,13 @@ import { CtaLink } from "./cta-link";
 import { Heading } from "./heading";
 import { PageWrapper } from "./page-wrapper";
 import { Paragraph } from "./paragraph";
+import { Link } from "./link";
 
 export function Footer() {
   return (
     <PageWrapper hasNoBottomPadding hasNoTopPadding bgColor="bg-white">
       <div className="flex flex-col pt-10 md:pt-20">
-        <div className="flex flex-col py-8 px-7 md:py-16 md:px-14 bg-beige rounded-t-2xl">
+        <div className="flex flex-col pt-8 px-7 md:pt-16 md:px-14 bg-beige rounded-t-2xl">
           <div className="flex flex-col lg:flex-row justify-between gap-6">
             <Heading size="sm" className="max-w-80">
               {"Skupnost žensk v tehnologiji"}
@@ -43,7 +44,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row px-6 md:px-12 bg-beige justify-between">
+        <div className="flex flex-col-reverse gap-10 md:flex-row px-7 py-16 md:px-14 bg-beige justify-between">
           <div className="flex flex-col gap-4">
             <Image
               src="/assets/klub-ada-logo.svg"
@@ -53,37 +54,55 @@ export function Footer() {
             />
             <Paragraph size="sm">{"info@klub-ada.si"}</Paragraph>
           </div>
-          <div className="flex flex-wrap md:flex-row gap-10">
-            <div className="flex flex-col gap-2">
-              <Paragraph size="md" weight="bold">
+          <div className="flex flex-col md:flex-row gap-10 lg:gap-24">
+            <div className="flex flex-col gap-2 w">
+              <Paragraph size="lg" weight="bold">
                 {"O nas"}
               </Paragraph>
               <div className="flex flex-col gap-2">
-                <Paragraph size="sm">{"Spoznaj Klub Ada"}</Paragraph>
-                <Paragraph size="sm">{"Zgodovina"}</Paragraph>
-                <Paragraph size="sm">{"Doniraj nam"}</Paragraph>
+                <Link variant="secondary" href="./page">
+                  {"Spoznaj Klub Ada"}
+                </Link>
+                <Link variant="secondary" href="./page">
+                  {"Zgodovina"}
+                </Link>
+                <Link variant="secondary" href="./page">
+                  {"Doniraj nam"}
+                </Link>
               </div>
             </div>
 
             <div className="flex flex-col gap-2">
-              <Paragraph size="md" weight="bold">
+              <Paragraph size="lg" weight="bold">
                 {"Aktivnosti"}
               </Paragraph>
               <div className="flex flex-col gap-2">
-                <Paragraph size="sm">{"Dogodki"}</Paragraph>
-                <Paragraph size="sm">{"Blog"}</Paragraph>
-                <Paragraph size="sm">{"Partnerstva"}</Paragraph>
+                <Link variant="secondary" href="./page">
+                  {"Dogodki"}
+                </Link>
+                <Link variant="secondary" href="./page">
+                  {"Blog"}
+                </Link>
+                <Link variant="secondary" href="./page">
+                  {"Partnerstva"}
+                </Link>
               </div>
             </div>
 
             <div className="flex flex-col gap-2">
-              <Paragraph size="md" weight="bold">
+              <Paragraph size="lg" weight="bold">
                 {"Pridruži se nam"}
               </Paragraph>
               <div className="flex flex-col gap-2">
-                <Paragraph size="sm">{"Discord"}</Paragraph>
-                <Paragraph size="sm">{"LinkedIn"}</Paragraph>
-                <Paragraph size="sm">{"Instagram"}</Paragraph>
+                <Link variant="secondary" href="./page">
+                  {"Discord"}
+                </Link>
+                <Link variant="secondary" href="./page">
+                  {"LinkedIn"}
+                </Link>
+                <Link variant="secondary" href="./page">
+                  {"Instagram"}
+                </Link>
               </div>
             </div>
           </div>

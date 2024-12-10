@@ -20,18 +20,26 @@ export function Navbar() {
         className="block md:hidden"
         alt="Klub ada logo"
       />
-      <ol className="items-center gap-6 hidden md:flex">
+      <ol className="items-center gap-10 hidden md:flex">
         <li>
-          <Link href="/o-nas">O nas</Link>
+          <Link variant="tertiary" href="/o-nas">
+            O nas
+          </Link>
         </li>
         <li>
-          <Link href="/dogodki">Dogodki</Link>
+          <Link variant="tertiary" href="/dogodki">
+            Dogodki
+          </Link>
         </li>
         <li>
-          <Link href="/blog">Blog</Link>
+          <Link variant="tertiary" href="/blog">
+            Blog
+          </Link>
         </li>
         <li>
-          <Link href="/partnerstvo">Partnerstva</Link>
+          <Link variant="tertiary" href="/partnerstvo">
+            Partnerstva
+          </Link>
         </li>
       </ol>
       <div className="hidden md:block">
