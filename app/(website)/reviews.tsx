@@ -1,13 +1,13 @@
-import { Button } from "./components/button";
-import { Card } from "./components/card";
-import { Heading } from "./components/heading";
-import { PageWrapper } from "./components/page-wrapper";
-import { Paragraph } from "./components/paragraph";
+import { Button } from "../components/button";
+import { Card } from "../components/card";
+import { Heading } from "../components/heading";
+import { PageWrapper } from "../components/page-wrapper";
+import { Paragraph } from "../components/paragraph";
 
 export function Reviews() {
   return (
     <PageWrapper bgColor="bg-blue">
-      <div className="flex flex-col py-10 md:py-20 gap-8 md:gap-16">
+      <div className="flex flex-col gap-8 md:gap-16">
         <div className="flex flex-col gap-8">
           <div className="max-w-sm md:max-w-2xl">
             <Heading size="lg">

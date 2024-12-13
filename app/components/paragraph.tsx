@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { ForwardRefComponent, PropsOf } from "../utils/polymorphic";
 import { tv } from "tailwind-variants";
+import clsx from "clsx";
 
 const baseParagraph = tv({
   base: "font-paragraph m-0 break-words text-wrap",
@@ -95,7 +96,7 @@ export const Paragraph = forwardRef(
     return (
       <p
         ref={forwardedRef}
-        className={
+        className={clsx(
           baseParagraph({
             size,
             color,
@@ -103,8 +104,9 @@ export const Paragraph = forwardRef(
             weight,
             textAlign,
             truncate: shouldTruncate,
-          }) + ` ${className}`
-        }
+          }),
+          className
+        )}
         {...rest}
       >
         {children}

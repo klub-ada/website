@@ -18,7 +18,6 @@ export default function RootLayout({
       <body
         className={`${anaheim.className} antialiased max-w-screen-2xl mx-auto`}
       >
-        <Navbar />
         {children}
       </body>
     </html>
