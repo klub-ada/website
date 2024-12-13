@@ -60,7 +60,12 @@ export async function NaslednjiDogodek() {
                 </Paragraph>
               </div>
               <div className="">
-                <LinkButton size="md" href={nextEvent.applyLink} isExternal>
+                <LinkButton
+                  size="md"
+                  variant="primary"
+                  href={nextEvent.applyLink}
+                  isExternal
+                >
                   Pridruži se
                 </LinkButton>
               </div>
