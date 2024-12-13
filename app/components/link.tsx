@@ -29,7 +29,7 @@ export interface LinkOptions {
    * Sets the style variant of the link element
    * @default 'md'
    */
-  variant: "primary" | "secondary" | "tertiary";
+  variant?: "primary" | "secondary" | "tertiary";
 }
 
 type LinkComponent = ForwardRefComponent<"a", LinkOptions>;
