@@ -16,7 +16,7 @@ export function BlogCard({
   imageAlt,
 }: BlogCardProps) {
   return (
-    <article className="flex flex-col gap-6 bg-white rounded-2xl border border-black p-6 xl:p-8 ${className}">
+    <article className="flex flex-col gap-6 pink100 rounded-2xl border border-black p-6 xl:p-8 ${className}">
       <div className="flex flex-col gap-4">
         <Image
           src={imageSrc}

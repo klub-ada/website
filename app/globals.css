@@ -30,6 +30,15 @@
   --color-red-700: #cc4646;
   --color-red-800: #993434;
 
+  --color-pink-100: #fff3f6;
+  --color-pink-200: #ffe7ed;
+  --color-pink-300: #ffcedb;
+  --color-pink-400: #ffb6c9;
+  --color-pink-500: #ff9db7;
+  --color-pink-600: var(--color-pink);
+  --color-pink-700: #cc6a84;
+  --color-pink-800: #995063;
+
   --color-gray-100: #e9e9e9;
   --color-gray-200: #d3d2d2;
   --color-gray-300: #bdbcbc;
