@@ -26,8 +26,8 @@ export default async function Page() {
   return (
     <PageWrapper>
       <div className="flex flex-col pb-10 md:pb-20 px-8 md:px-16 gap-6 items-center">
-        <Heading size="sm">{"Preberi naše članke"}</Heading>
-        <Paragraph size="sm">
+        <Heading size="xl">{"Preberi naše članke"}</Heading>
+        <Paragraph size="lg">
           {
             "Preberi povzetke dogodkov, uporabne nasvete za iskanje službe, priprava na tehnični intervju, predlogi knjig in še več."
           }
