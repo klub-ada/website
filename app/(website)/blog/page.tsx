@@ -4,6 +4,7 @@ import { Paragraph } from "@/app/components/paragraph";
 import { Post } from "@/app/utils/interface";
 import { client } from "@/sanity/lib/client";
 import PostComponent from "@/app/components/post-component";
+import { NewsletterComponent } from "@/app/components/newsletter-component";
 
 async function getPosts() {
   const query = `*[_type == "post"] {
@@ -33,11 +34,25 @@ export default async function Page() {
           }
         </Paragraph>
       </div>
-
+      {/* First 3 posts */}
       <div className="flex gap-6">
-        {posts.map((post) => (
-          <div className="basis-1/3">
-            <PostComponent key={post.slug} post={post} />
+        {posts.slice(0, 3).map((post, index) => (
+          <div key={post.slug} className="basis-1/3">
+            <PostComponent post={post} />
+          </div>
+        ))}
+      </div>
+
+      {/* Newsletter Component */}
+      <div className="py-20">
+        <NewsletterComponent />
+      </div>
+
+      {/* Remaining Posts (4 to 10) */}
+      <div className="flex gap-6">
+        {posts.slice(3, 6).map((post, index) => (
+          <div key={post.slug} className="basis-1/3">
+            <PostComponent post={post} />
           </div>
         ))}
       </div>
