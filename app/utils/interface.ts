@@ -1,6 +1,8 @@
 export interface Post {
   title: string;
-  slug: string;
+  slug: {
+    current: string;
+  };
   publishedAt: string;
   body: any;
   categories: { title: string }[];

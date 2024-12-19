@@ -4,7 +4,6 @@ import { Heading } from "./heading";
 import { Paragraph } from "./paragraph";
 import Image from "next/image";
 import imageLoader from "../utils/image-loader";
-import { Button } from "./button";
 import Link from "next/link";
 
 interface Props {
@@ -34,8 +33,8 @@ const PostComponent = ({ post }: Props) => {
           ))}
         </div>
         <Heading size="xs">{post.title}</Heading>
-        <div className="">
-          <Link href="./page">{"Preberi blog"}</Link>
+        <div key={post.slug.current} className="">
+          <Link href={`/blog/${post.slug.current}`}>{"Preberi blog"}</Link>
         </div>
       </div>
     </div>
