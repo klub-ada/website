@@ -51,46 +51,55 @@ const BlogArticle = async ({ params }: Params) => {
   const portableTextComponents: Partial<PortableTextComponents> = {
     block: {
       h1: ({ children }) => (
-        <Heading size="xl" color="black" textAlign="left">
+        <Heading size="md" color="black" textAlign="left" className="my-5">
           {children}
         </Heading>
       ),
       h2: ({ children }) => (
-        <Heading size="lg" color="black" textAlign="left">
+        <Heading size="sm" color="black" textAlign="left" className="my-4">
           {children}
         </Heading>
       ),
       h3: ({ children }) => (
-        <Heading size="md" color="black" textAlign="left">
+        <Heading size="xs" color="black" textAlign="left" className="my-3">
           {children}
         </Heading>
       ),
       bodyXl: ({ children }) => (
-        <Paragraph size="xl" color="black" textAlign="left">
+        <Paragraph size="xl" color="black" textAlign="left" className="my-8">
           {children}
         </Paragraph>
       ),
-      bodyMd: ({ children }) => (
-        <Paragraph size="md" color="black" textAlign="left">
+      bodyLg: ({ children }) => (
+        <Paragraph size="lg" color="black" textAlign="left" className="mb-6">
           {children}
         </Paragraph>
       ),
-      bodyXs: ({ children }) => (
-        <Paragraph size="xs" color="gray" textAlign="left">
+      bodySm: ({ children }) => (
+        <Paragraph size="sm" color="gray" textAlign="left" className="mb-4">
           {children}
         </Paragraph>
       ),
       blockquote: ({ children }) => (
-        <blockquote className="pl-4 border-l-4 border-gray-300 italic text-gray-500 my-6">
+        <Paragraph
+          size="lg"
+          className="pl-4 border-l-4 border-red italic text-gray-500 my-6"
+        >
           {children}
-        </blockquote>
+        </Paragraph>
       ),
     },
+    list: {
+      bullet: ({ children }) => (
+        <ul className="list-disc pl-4 [&_p]:mb-0">{children}</ul>
+      ),
+    },
+
     marks: {
-      strong: ({ children }: { children: React.ReactNode }) => (
+      strong: ({ children }) => (
         <strong className="font-bold text-gray-900">{children}</strong>
       ),
-      em: ({ children }: { children: React.ReactNode }) => (
+      em: ({ children }) => (
         <em className="italic text-gray-600">{children}</em>
       ),
       link: ({ value, children }) => (

@@ -25,12 +25,11 @@ export const blockContentType = defineType({
       // use your content.
       styles: [
         { title: "Body XL", value: "bodyXl" },
-        { title: "Body MD", value: "bodyMd" },
-        { title: "Body XS", value: "bodyXs" },
+        { title: "Body LG", value: "bodyLg" },
+        { title: "Body SM", value: "bodySm" },
         { title: "H1", value: "h1" },
         { title: "H2", value: "h2" },
         { title: "H3", value: "h3" },
-        { title: "H4", value: "h4" },
         { title: "Quote", value: "blockquote" },
       ],
       lists: [{ title: "Bullet", value: "bullet" }],
