@@ -25,6 +25,14 @@ const config: Config = {
         red700: "var(--color-red-700)",
         red800: "var(--color-red-800)",
 
+        pink100: "var(--color-pink-100)",
+        pink200: "var(--color-pink-200)",
+        pink300: "var(--color-pink-300)",
+        pink400: "var(--color-pink-400)",
+        pink500: "var(--color-pink-500)",
+        pink700: "var(--color-pink-700)",
+        pink800: "var(--color-pink-800)",
+
         blue100: "var(--color-blue-100)",
         blue200: "var(--color-blue-200)",
         blue300: "var(--color-blue-300)",
