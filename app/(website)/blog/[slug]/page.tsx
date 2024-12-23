@@ -1,12 +1,12 @@
 import { Footer } from "@/app/components/footer";
-import { Heading } from "@/app/components/heading";
-import { PageWrapper } from "@/app/components/page-wrapper";
 import { Paragraph } from "@/app/components/paragraph";
 import imageLoader from "@/app/utils/image-loader";
+import Image from "next/image";
+import { Heading } from "@/app/components/heading";
+import { PageWrapper } from "@/app/components/page-wrapper";
 import { Post } from "@/app/utils/interface";
 import { client } from "@/sanity/lib/client";
-import { PortableText } from "next-sanity";
-import Image from "next/image";
+import { PortableText, PortableTextComponents } from "next-sanity";
 import React from "react";
 
 interface Params {
@@ -48,27 +48,25 @@ const BlogArticle = async ({ params }: Params) => {
   const post: Post = await getPost(params.slug);
   const imageSrc = imageLoader(post.mainImage);
 
-  const portableTextComponents = {
+  const portableTextComponents: Partial<PortableTextComponents> = {
     block: {
-      h1: ({ children }: { children: any }) => (
+      h1: ({ children }) => (
         <Heading size="xl" color="black" textAlign="left">
           {children}
         </Heading>
       ),
-      h2: ({ children }: { children: any }) => (
+      h2: ({ children }) => (
         <Heading size="lg" color="black" textAlign="left">
           {children}
         </Heading>
       ),
-      h3: ({ children }: { children: any }) => (
+      h3: ({ children }) => (
         <Heading size="md" color="black" textAlign="left">
           {children}
         </Heading>
       ),
-      normal: ({ children }: { children: any }) => (
-        <Paragraph size="md">{children}</Paragraph>
-      ),
-      blockquote: ({ children }: { children: any }) => (
+      normal: ({ children }) => <Paragraph size="md">{children}</Paragraph>,
+      blockquote: ({ children }) => (
         <blockquote className="pl-4 border-l-4 border-gray-300 italic text-gray-500 my-6">
           {children}
         </blockquote>
@@ -81,13 +79,7 @@ const BlogArticle = async ({ params }: Params) => {
       em: ({ children }: { children: React.ReactNode }) => (
         <em className="italic text-gray-600">{children}</em>
       ),
-      link: ({
-        value,
-        children,
-      }: {
-        value: { href: string };
-        children: React.ReactNode;
-      }) => (
+      link: ({ value, children }) => (
         <a
           href={value?.href}
           target="_blank"
