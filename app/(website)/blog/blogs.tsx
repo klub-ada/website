@@ -5,6 +5,7 @@ import { Post } from "@/app/utils/interface";
 import { client } from "@/sanity/lib/client";
 import PostComponent from "@/app/components/post-component";
 import { NewsletterComponent } from "@/app/components/newsletter-component";
+import Image from "next/image";
 
 async function getPosts() {
   const query = `*[_type == "post"] {
@@ -26,6 +27,13 @@ export default async function Blogs() {
   return (
     <PageWrapper>
       <div className="flex flex-col pb-10 md:pb-20 px-8 md:px-16 gap-6 items-center">
+        <Image
+          src="/assets/blog-illustration.png"
+          width={100}
+          height={100}
+          alt="Blog illustration"
+          className="max-h-100 object-cover"
+        />
         <Heading size="xl">{"Preberi naše članke"}</Heading>
         <Paragraph size="lg">
           {
