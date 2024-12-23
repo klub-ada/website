@@ -65,7 +65,21 @@ const BlogArticle = async ({ params }: Params) => {
           {children}
         </Heading>
       ),
-      normal: ({ children }) => <Paragraph size="md">{children}</Paragraph>,
+      bodyXl: ({ children }) => (
+        <Paragraph size="xl" color="black" textAlign="left">
+          {children}
+        </Paragraph>
+      ),
+      bodyMd: ({ children }) => (
+        <Paragraph size="md" color="black" textAlign="left">
+          {children}
+        </Paragraph>
+      ),
+      bodyXs: ({ children }) => (
+        <Paragraph size="xs" color="gray" textAlign="left">
+          {children}
+        </Paragraph>
+      ),
       blockquote: ({ children }) => (
         <blockquote className="pl-4 border-l-4 border-gray-300 italic text-gray-500 my-6">
           {children}
