@@ -28,6 +28,8 @@ export const postType = defineType({
     }),
     defineField({
       name: "pinned",
+      description:
+        "Pin this post to the top of the blog. Keep in mind only three posts should be pinned at the same time.",
       title: "Pin blog",
       type: "boolean",
     }),
