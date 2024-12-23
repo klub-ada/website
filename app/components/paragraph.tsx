@@ -33,6 +33,7 @@ const baseParagraph = tv({
     color: {
       black: "text-black",
       white: "text-white",
+      gray: "gray300",
     },
     truncate: {
       true: "truncate",
@@ -50,19 +51,19 @@ interface ParagraphOptions {
   /**
    * Sets the font weight of the paragraph.
    *
-   * @default 'md'
+   * @default 'medium'
    */
   weight?: "regular" | "medium" | "semiBold" | "bold" | "extraBold";
   /**
    * Sets the color of the paragraph
-   * @default 'medium'
+   * @default 'tight'
    */
   lineHeight?: "tight" | "none" | "normal";
   /**
    * Sets the line hight of the paragraph
-   * @default 'tight'
+   * @default 'black'
    */
-  color?: "black" | "white";
+  color?: "black" | "white" | "gray";
   /**
    * Truncates the paragraph if true
    */

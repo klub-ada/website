@@ -9,7 +9,9 @@ export const postType = defineType({
   fields: [
     defineField({
       name: "title",
+      title: "Title",
       type: "string",
+      validation: (Rule: any) => Rule.required(),
     }),
     defineField({
       name: "slug",
@@ -20,12 +22,16 @@ export const postType = defineType({
     }),
     defineField({
       name: "author",
+      title: "Author",
       type: "reference",
       to: { type: "teamMember" },
+      validation: (Rule: any) => Rule.required(),
     }),
     defineField({
       name: "mainImage",
+      title: "Main image",
       type: "image",
+      validation: (Rule: any) => Rule.required(),
       options: {
         hotspot: true,
       },
@@ -39,7 +45,9 @@ export const postType = defineType({
     }),
     defineField({
       name: "categories",
+      title: "Categories",
       type: "array",
+      validation: (Rule: any) => Rule.required(),
       of: [defineArrayMember({ type: "reference", to: { type: "category" } })],
     }),
     defineField({
@@ -48,7 +56,9 @@ export const postType = defineType({
     }),
     defineField({
       name: "body",
+      title: "Block",
       type: "blockContent",
+      validation: (Rule: any) => Rule.required(),
     }),
   ],
   preview: {
