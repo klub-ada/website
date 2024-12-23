@@ -5,6 +5,12 @@ export const postType = defineType({
   name: "post",
   title: "Post",
   type: "document",
+  // validation: (rule) =>
+  //   rule.custom((fields) => {
+  //     if (fields.pinned.length > 0 && Object.keys(fields.guest).length > 0)
+  //       return "You can't have an author AND guest author";
+  //     return true;
+  //   }),
   icon: DocumentTextIcon,
   fields: [
     defineField({
@@ -19,6 +25,11 @@ export const postType = defineType({
       options: {
         source: "title",
       },
+    }),
+    defineField({
+      name: "pinned",
+      title: "Pin blog",
+      type: "boolean",
     }),
     defineField({
       name: "author",
