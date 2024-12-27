@@ -35,7 +35,7 @@ export default async function Blogs() {
           className="max-h-100 object-cover"
         />
         <Heading size="xl">{"Preberi naše članke"}</Heading>
-        <Paragraph size="lg">
+        <Paragraph size="lg" className="max-w-xl text-center">
           {
             "Preberi povzetke dogodkov, uporabne nasvete za iskanje službe, priprava na tehnični intervju, predlogi knjig in še več."
           }
