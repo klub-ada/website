@@ -1,7 +1,11 @@
+import { Hero } from "./hero";
+import { WhyPartner } from "./why-partner";
+
 export default function Page() {
   return (
-    <div>
-      <h1>Partnerstvo</h1>
-    </div>
+    <>
+      <Hero />
+      <WhyPartner />
+    </>
   );
 }
