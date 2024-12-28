@@ -12,11 +12,6 @@ export function WhyPartner() {
           <Heading size="lg" className="text-left max-w-96">
             {"Zakaj postati partner?"}
           </Heading>
-          <div className="">
-            <Button size="md" variant="secondary">
-              {"Postani partner"}
-            </Button>
-          </div>
         </div>
         <div className="flex flex-col gap-6 basis-1/2">
           <Paragraph size="lg">

@@ -1,3 +1,4 @@
+import { Button } from "@/app/components/button";
 import { Heading } from "@/app/components/heading";
 import { PageWrapper } from "@/app/components/page-wrapper";
 import { Paragraph } from "@/app/components/paragraph";
@@ -17,11 +18,16 @@ export function Hero() {
         <Heading size="xl" className="text-center">
           {"Postani partner Kluba Ada"}
         </Heading>
-        <Paragraph size="lg" className="max-w-xl text-center">
+        <Paragraph size="lg" className="max-w-2xl text-center">
           {
             "Partnerstvo s Klubom Ada ponuja priložnost za sodelovanje pri oblikovanju dogodkov in promocijskih aktivnostih. Sodelovanje omogoča dostop do skupnosti, ki združuje ženske z različnimi stopnjami znanja in izkušnjami na področju tehnologije."
           }
         </Paragraph>
+        <div className="">
+          <Button size="md" variant="secondary">
+            {"Postani partner"}
+          </Button>
+        </div>
       </div>
       <div>
         <Image
@@ -29,7 +35,7 @@ export function Hero() {
           width={500}
           height={500}
           alt="Blog illustration"
-          className="w-full object-cover h-[42rem] rounded-2xl border border-black my-6"
+          className="w-full object-cover max-h-[42rem] rounded-2xl border border-black my-6"
         />
       </div>
     </PageWrapper>
