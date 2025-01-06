@@ -27,7 +27,7 @@ export interface LinkOptions {
   isExternal?: boolean;
   /**
    * Sets the style variant of the link element
-   * @default 'md'
+   * @default 'primary'
    */
   variant?: "primary" | "secondary" | "tertiary";
 }
@@ -37,7 +37,7 @@ export type LinkProps = PropsOf<LinkComponent>;
 
 export const Link = forwardRef(
   (
-    { children, href, isExternal = false, variant = "secondary", ...restProps },
+    { children, href, isExternal = false, variant = "primary", ...restProps },
     forwardedRef
   ) => {
     const externalProps = isExternal

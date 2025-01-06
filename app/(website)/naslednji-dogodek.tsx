@@ -55,7 +55,7 @@ export async function NaslednjiDogodek() {
                   {`${formattedDateAndTime} @ ${nextEvent.location}`}
                 </Paragraph>
                 <Heading size="sm">{nextEvent.title}</Heading>
-                <Paragraph size="lg" weight="regular" className="max-w-xl">
+                <Paragraph size="lg" className="max-w-xl">
                   {nextEvent.description}
                 </Paragraph>
               </div>

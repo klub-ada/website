@@ -31,16 +31,13 @@ export function NavbarMenu() {
             <Link href="/o-nas">O nas</Link>
           </li>
           <li>
-            <Link href="/dogodki">Dogodki</Link>
-          </li>
-          <li>
             <Link href="/blog">Blog</Link>
           </li>
           <li>
             <Link href="/partnerstvo">Partnerstva</Link>
           </li>
         </ol>
-        <Button>Pridruži se nam</Button>
+        <Button>Dogodki</Button>
       </div>
     </div>
   );

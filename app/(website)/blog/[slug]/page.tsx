@@ -8,6 +8,8 @@ import { Post } from "@/app/utils/interface";
 import { client } from "@/sanity/lib/client";
 import { PortableText, PortableTextComponents } from "next-sanity";
 import React from "react";
+import { formatDate } from "../../../utils/date";
+import { NewsletterComponent } from "@/app/components/newsletter-component";
 
 interface Params {
   params: {
@@ -25,22 +27,12 @@ async function getPost(slug: string) {
   categories[]-> {
     _id,
     slug,
-    name,
+    title,
   }
 }`;
 
   const post = await client.fetch(query, { slug });
   return post;
-}
-
-// Fetch all slugs for static generation
-export async function generateStaticParams() {
-  const query = `*[_type == "post"] { "slug": slug.current }`;
-  const posts = await client.fetch(query);
-
-  return posts.map((post: { slug: string }) => ({
-    slug: post.slug, // Map to { slug } structure
-  }));
 }
 
 // Blog Article Component
