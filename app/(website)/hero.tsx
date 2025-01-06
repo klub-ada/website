@@ -13,7 +13,7 @@ export function Hero() {
           <Card bgColor="bg-white">
             <div className="flex flex-col h-full justify-between gap-8">
               <Heading size="xl">{"Skupnost žensk v tehnologiji"}</Heading>
-              <Paragraph size="xl">
+              <Paragraph size="lg">
                 {
                   "Klub Ada organizira dogodke, ki so namenjeni mreženju in deljenju znanja, kariernega in osebnega razvoja za dijakinje, študentke, zaposlene in vse, ki jih področje tehnologije zanima."
                 }

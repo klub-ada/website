@@ -27,11 +27,6 @@ export function Navbar() {
           </Link>
         </li>
         <li>
-          <Link variant="tertiary" href="/dogodki">
-            Dogodki
-          </Link>
-        </li>
-        <li>
           <Link variant="tertiary" href="/blog">
             Blog
           </Link>
@@ -43,7 +38,7 @@ export function Navbar() {
         </li>
       </ol>
       <div className="hidden md:block">
-        <Button size="sm">Pridruži se nam</Button>
+        <Button size="md">Vsi dogodki</Button>
       </div>
       <NavbarMenu />
     </nav>
