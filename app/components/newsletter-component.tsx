@@ -1,5 +1,4 @@
 import { Button } from "./button";
-import { CtaLink } from "./cta-link";
 import { Heading } from "./heading";
 import { PageWrapper } from "./page-wrapper";
 import { Paragraph } from "./paragraph";
