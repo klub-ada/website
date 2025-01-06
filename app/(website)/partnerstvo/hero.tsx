@@ -9,11 +9,11 @@ export function Hero() {
     <PageWrapper>
       <div className="flex flex-col pb-10 md:pb-20 px-8 md:px-16 gap-6 items-center">
         <Image
-          src="/assets/blog-illustration.png"
+          src="/assets/partners-illustration.png"
           width={100}
           height={100}
           alt="Blog illustration"
-          className="max-h-100 object-cover"
+          className="max-h-96 object-cover"
         />
         <Heading size="xl" className="text-center">
           {"Postani partner Kluba Ada"}
@@ -32,8 +32,8 @@ export function Hero() {
       <div>
         <Image
           src="/assets/hero.jpg"
-          width={500}
-          height={500}
+          width={1500}
+          height={1500}
           alt="Blog illustration"
           className="w-full object-cover max-h-[42rem] rounded-2xl border border-black my-6"
         />

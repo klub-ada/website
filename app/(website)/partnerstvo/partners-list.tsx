@@ -1,4 +1,3 @@
-import { Heading } from "@/app/components/heading";
 import { PageWrapper } from "@/app/components/page-wrapper";
 import { Paragraph } from "@/app/components/paragraph";
 import Image from "next/image";
