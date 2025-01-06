@@ -31,10 +31,14 @@ export function Hero() {
           </div>
           <div className="flex flex-row gap-4">
             <div className="basis-1/2">
-              <CtaLink label="Pridi na dogodek" color="red" href="/" />
+              <CtaLink label="Pridi na dogodek" color="red" href="/dogodki" />
             </div>
             <div className="basis-1/2">
-              <CtaLink label="Postani partner" color="blue" href="/" />
+              <CtaLink
+                label="Postani partner"
+                color="blue"
+                href="/partnerstvo"
+              />
             </div>
           </div>
         </div>

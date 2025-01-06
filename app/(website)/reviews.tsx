@@ -4,6 +4,7 @@ import { Card } from "../components/card";
 import { Heading } from "../components/heading";
 import { PageWrapper } from "../components/page-wrapper";
 import { Paragraph } from "../components/paragraph";
+import Link from "next/link";
 
 export function Reviews() {
   return (
@@ -15,11 +16,11 @@ export function Reviews() {
               {"Kaj pravijo naše članice in partnerji"}
             </Heading>
           </div>
-          <div className="">
+          <Link href="/partnerstvo">
             <Button size="md" variant="secondary">
               Postani partner
             </Button>
-          </div>
+          </Link>
         </div>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-4 md:flex-row">

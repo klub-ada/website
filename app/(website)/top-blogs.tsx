@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BlogCard } from "../components/blog-card";
 import { Button } from "../components/button";
 import { Heading } from "../components/heading";
@@ -17,11 +18,11 @@ export async function TopBlogs() {
           <div className="max-w-sm md:max-w-2xl">
             <Heading size="lg">Najnovejši blogi</Heading>
           </div>
-          <div className="">
+          <Link href="/blog">
             <Button size="md" variant="primary">
               Preberi vse bloge
             </Button>
-          </div>
+          </Link>
         </div>
 
         <div className="flex flex-col md:flex-row md:flex-nowrap gap-4">

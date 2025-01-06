@@ -9,6 +9,7 @@ import { client } from "@/sanity/lib/client";
 import imageLoader from "../utils/image-loader";
 import { LinkButton } from "../components/link-button";
 import { formatDate, formatTime } from "../utils/date";
+import Link from "next/link";
 
 const NEXT_EVENT_QUERY = `*[
   _type == "event" && eventTime >= $today
@@ -32,11 +33,11 @@ export async function NaslednjiDogodek() {
           <div className="max-w-sm md:max-w-xl">
             <Heading size="lg">{"Pridi na naš naslednji dogodek!"}</Heading>
           </div>
-          <div className="">
+          <Link href="/dogodki">
             <Button size="md" variant="secondary">
               Vsi dogodki
             </Button>
-          </div>
+          </Link>
         </div>
         <Card bgColor="bg-red100">
           <div className="md:flex gap-8 md:items-center">
