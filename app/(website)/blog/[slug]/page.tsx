@@ -38,44 +38,37 @@ async function getPost(slug: string) {
 // Blog Article Component
 const BlogArticle = async ({ params }: Params) => {
   const post: Post = await getPost(params.slug);
-  const date = formatDate(post.publishedAt);
   const imageSrc = imageLoader(post.mainImage);
 
   const portableTextComponents: Partial<PortableTextComponents> = {
     block: {
       h1: ({ children }) => (
-        <h1 className="sans-serif Anaheim text-3xl mt-12 mb-2 font-bold text-black">
+        <Heading size="md" color="black" textAlign="left" className="my-5">
           {children}
-        </h1>
+        </Heading>
       ),
       h2: ({ children }) => (
-        <h2 className="sans-serif Anaheim text-2xl mt-6 mb-2 font-bold text-black">
+        <Heading size="sm" color="black" textAlign="left" className="my-4">
           {children}
-        </h2>
+        </Heading>
       ),
       h3: ({ children }) => (
-        <h3 className="sans-serif Anaheim text-xl mt-6 mb-2 font-bold text-black">
+        <Heading size="xs" color="black" textAlign="left" className="my-3">
           {children}
-        </h3>
+        </Heading>
       ),
       bodyXl: ({ children }) => (
-        <Paragraph
-          size="xl"
-          color="pink"
-          weight="bold"
-          textAlign="left"
-          className="mb-2"
-        >
+        <Paragraph size="xl" color="black" textAlign="left" className="my-8">
           {children}
         </Paragraph>
       ),
       bodyLg: ({ children }) => (
-        <Paragraph size="lg" color="black" textAlign="left" className="mb-4">
+        <Paragraph size="lg" color="black" textAlign="left" className="mb-6">
           {children}
         </Paragraph>
       ),
       bodySm: ({ children }) => (
-        <Paragraph size="sm" color="gray" textAlign="left" className="mb-2">
+        <Paragraph size="sm" color="gray" textAlign="left" className="mb-4">
           {children}
         </Paragraph>
       ),
@@ -92,9 +85,6 @@ const BlogArticle = async ({ params }: Params) => {
       bullet: ({ children }) => (
         <ul className="list-disc pl-4 [&_p]:mb-0">{children}</ul>
       ),
-      number: ({ children }) => (
-        <ul className="list-decimal pl-4 [&_p]:mb-0">{children}</ul>
-      ),
     },
 
     marks: {
@@ -109,7 +99,7 @@ const BlogArticle = async ({ params }: Params) => {
           href={value?.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black decoration-pink underline hover:text-pink"
+          className="text-blue-500 underline hover:text-blue-700"
         >
           {children}
         </a>
@@ -120,35 +110,32 @@ const BlogArticle = async ({ params }: Params) => {
   return (
     <>
       <PageWrapper>
-        <div className="max-w-3xl mx-auto gap-10">
+        <div className="max-w-3xl mx-auto p-6 gap-10">
           <div className="flex gap-2">
             {post.categories.map((category) => (
               <Paragraph
                 size="xs"
-                className="py-1 px-2 text-white font-semibold bg-pink border border-black rounded-lg"
+                className="py-1 px-2 text-pink font-semibold bg-white border border-black rounded-lg"
               >
                 {category.title}
               </Paragraph>
             ))}
           </div>
-          <Heading size="lg" color="black" className="my-6">
+
+          <Heading size="lg" color="black" className="mb-10">
             {post.title}
           </Heading>
-          <span>{date}</span>
+          <span>{`${post.publishedAt}`}</span>
           <Image
             src={imageSrc}
             width={500}
             height={500}
             alt={post.mainImage.alt}
-            className="w-full object-cover h-96 rounded-2xl border border-black my-6"
+            className="w-full object-cover h-96 rounded-2xl border border-black mb-6"
           />
           <PortableText value={post.body} components={portableTextComponents} />
         </div>
       </PageWrapper>
-
-      {/* Newsletter Component */}
-
-      <NewsletterComponent />
 
       <Footer />
     </>

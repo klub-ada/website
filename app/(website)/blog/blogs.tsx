@@ -8,7 +8,22 @@ import { NewsletterComponent } from "@/app/components/newsletter-component";
 import Image from "next/image";
 
 async function getPosts() {
-  const query = `*[_type == "post"] {
+  const query = `*[_type == "post" && pinned != true] {
+  title,
+  slug,
+  mainImage,
+  categories[]-> {
+    _id,
+    slug,
+    title,
+  }
+}`;
+  const data = await client.fetch(query);
+  return data;
+}
+
+export async function getPinnedPosts() {
+  const query = `*[_type == "post" && pinned] {
   title,
   slug,
   mainImage,
@@ -23,6 +38,7 @@ async function getPosts() {
 }
 export default async function Blogs() {
   const posts: Post[] = await getPosts();
+  const pinnedPosts: Post[] = await getPinnedPosts();
 
   return (
     <PageWrapper>
@@ -42,8 +58,8 @@ export default async function Blogs() {
         </Paragraph>
       </div>
       {/* First 3 posts */}
-      <div className="flex flex-col md:flex-row gap-4">
-        {posts.slice(0, 3).map((post, index) => (
+      <div className="flex gap-6">
+        {pinnedPosts.map((post) => (
           <div key={post.slug.current} className="basis-1/3">
             <PostComponent post={post} />
           </div>
@@ -56,8 +72,8 @@ export default async function Blogs() {
       </div>
 
       {/* Remaining Posts (4 to 10) */}
-      <div className="flex flex-col md:flex-row gap-6">
-        {posts.slice(3, 6).map((post, index) => (
+      <div className="flex gap-6">
+        {posts.map((post) => (
           <div key={post.slug.current} className="basis-1/3">
             <PostComponent post={post} />
           </div>
