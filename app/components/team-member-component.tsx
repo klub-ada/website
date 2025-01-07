@@ -14,7 +14,7 @@ const TeamMemberComponent = ({ member }: TeamMemberProps) => {
 
   return (
     <div className="flex flex-col bg-white gap-6 border border-black rounded-2xl p-6 h-full justify-between">
-      <div className="flex flex-col h-full justify-between gap-4">
+      <div className="flex flex-col h-full gap-4">
         <Image
           src={imageSrc}
           width={500}

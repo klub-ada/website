@@ -6,7 +6,7 @@ import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 
 async function getTeamMember() {
-  const query = `*[_type == "teamMember"]{
+  const query = `*[_type == "teamMember"]| order(_updatedAt desc){
     image,
     name,
     role,

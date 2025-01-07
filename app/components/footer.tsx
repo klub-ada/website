@@ -25,13 +25,21 @@ export function Footer() {
                   />
                 </div>
                 <div className="basis-4/12">
-                  <CtaLink label="Postani partner" color="blue" href="/" />
+                  <CtaLink
+                    label="Postani partner"
+                    color="blue"
+                    href="/partnerstvo"
+                  />
                 </div>
               </div>
 
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="basis-4/12">
-                  <CtaLink label="Pridi na dogodek" color="red" href="/" />
+                  <CtaLink
+                    label="Pridi na dogodek"
+                    color="red"
+                    href="/dogodki"
+                  />
                 </div>
                 <div className="basis-8/12">
                   <CtaLink
