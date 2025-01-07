@@ -48,7 +48,7 @@ export default async function Blogs() {
           width={100}
           height={100}
           alt="Blog illustration"
-          className="max-h-100 object-cover"
+          className="w-[80px] md:w-[120px] lg:w-[160]"
         />
         <Heading size="xl">{"Preberi naše članke"}</Heading>
         <Paragraph size="lg" className="max-w-xl text-center">

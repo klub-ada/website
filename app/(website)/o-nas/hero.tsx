@@ -13,7 +13,7 @@ export function Hero() {
           width={100}
           height={100}
           alt="Computer illustration"
-          className="max-h-100 object-cover"
+          className="w-[80px] md:w-[120px] lg:w-[160]"
         />
         <Heading size="xl" className="text-center max-w-4xl">
           {
