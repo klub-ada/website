@@ -21,9 +21,9 @@ const baseParagraph = tv({
       extraBold: "font-extrabold",
     },
     lineHeight: {
-      tight: "leading-7",
-      none: "leading-8",
-      normal: "leading-9",
+      tight: "leading-5",
+      none: "leading-6",
+      normal: "leading-7",
     },
     textAlign: {
       left: "text-left",
