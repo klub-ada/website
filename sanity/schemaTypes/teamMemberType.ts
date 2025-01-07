@@ -30,10 +30,6 @@ export const teamMemberType = defineType({
       name: "linkedin",
       type: "string",
     }),
-    defineField({
-      name: "website",
-      type: "string",
-    }),
   ],
   preview: {
     select: {

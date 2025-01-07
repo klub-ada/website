@@ -1,7 +1,15 @@
+import { Footer } from "@/app/components/footer";
+import { Hero } from "./hero";
+import { Mission } from "./mission";
+import { Team } from "./team";
+
 export default function Page() {
   return (
-    <div>
-      <h1>O nas</h1>
-    </div>
+    <>
+      <Hero />
+      <Mission />
+      <Team />
+      <Footer />
+    </>
   );
 }

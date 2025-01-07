@@ -86,7 +86,7 @@ export const Paragraph = forwardRef(
       children,
       size = "md",
       color = "black",
-      lineHeight = "tight",
+      lineHeight = "none",
       textAlign = "left",
       weight = "medium",
       shouldTruncate,
