@@ -62,7 +62,7 @@ export const CtaLink = forwardRef(
         {...rest}
       >
         <div className="max-w-[95%] lg:max-w-[50%] min-w-[100px]">
-          <Paragraph size="xl" weight="bold" className="line-clamp-2">
+          <Paragraph size="xl" weight="bold" lineHeight="none">
             {label}
           </Paragraph>
         </div>

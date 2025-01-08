@@ -34,8 +34,8 @@ export function Hero() {
       <div>
         <Image
           src="/assets/hero.jpg"
-          width={500}
-          height={500}
+          width={1500}
+          height={1500}
           alt="Blog illustration"
           className="w-full object-cover max-h-[42rem] rounded-2xl border border-black my-6"
         />

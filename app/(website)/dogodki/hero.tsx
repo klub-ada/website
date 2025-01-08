@@ -1,7 +1,9 @@
+import { Button } from "@/app/components/button";
 import { Heading } from "@/app/components/heading";
 import { PageWrapper } from "@/app/components/page-wrapper";
 import { Paragraph } from "@/app/components/paragraph";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -24,6 +26,11 @@ export default function Hero() {
             "Pridruži se nam na neformalnih druženjih, kjer obravnavamo različne karierne in tehnične teme, gostimo strokovnjakinje iz industrije ter se družimo in izmenjujemo ideje v sproščenem okolju ob prigrizkih in pijači."
           }
         </Paragraph>
+        <Link href="/">
+          <Button size="md" variant="secondary">
+            {"Naslednji dogodek"}
+          </Button>
+        </Link>
       </div>
       <div className="flex flex-col gap-4">
         <div className="flex gap-4">
@@ -32,14 +39,14 @@ export default function Hero() {
             width={500}
             height={500}
             alt="Dogodek Image 1"
-            className="w-full object-cover w-4/6 rounded-2xl border border-black"
+            className="object-cover w-4/6 rounded-2xl border border-black"
           />
           <Image
             src="/assets/dogodek-2.png"
             width={500}
             height={500}
             alt="Dogodek Image 2"
-            className="w-full object-cover w-2/6 rounded-2xl border border-black"
+            className="object-cover w-2/6 rounded-2xl border border-black"
           />
         </div>
         <div className="flex gap-4">
@@ -48,14 +55,14 @@ export default function Hero() {
             width={500}
             height={500}
             alt="Dogodek Image 3"
-            className="w-full object-cover w-2/6 rounded-2xl border border-black"
+            className="object-cover w-2/6 rounded-2xl border border-black"
           />
           <Image
             src="/assets/dogodek-4.png"
             width={500}
             height={500}
             alt="Dogodek Image 4"
-            className="w-full object-cover w-4/6 rounded-2xl border border-black"
+            className="object-cover w-4/6 rounded-2xl border border-black"
           />
         </div>
       </div>
