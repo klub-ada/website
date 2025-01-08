@@ -9,15 +9,27 @@ export const eventType = defineType({
   fields: [
     defineField({
       name: "title",
+      title: "Title",
       type: "string",
+      validation: (Rule: any) => Rule.required(),
+    }),
+    defineField({
+      name: "slug",
+      type: "slug",
+      options: {
+        source: "title",
+      },
     }),
     defineField({
       name: "description",
+      title: "Description",
       type: "string",
     }),
     defineField({
       name: "eventImage",
+      title: "Event image",
       type: "image",
+      validation: (Rule: any) => Rule.required(),
       options: {
         hotspot: true,
       },
@@ -31,10 +43,12 @@ export const eventType = defineType({
     }),
     defineField({
       name: "location",
+      title: "Location",
       type: "string",
     }),
     defineField({
       name: "applyLink",
+      title: "Apply Link",
       type: "string",
     }),
     defineField({
