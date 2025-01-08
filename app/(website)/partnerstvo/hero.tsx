@@ -8,16 +8,18 @@ export function Hero() {
   return (
     <PageWrapper>
       <div className="flex flex-col pb-10 md:pb-20 px-8 md:px-16 gap-6 items-center">
-        <Image
-          src="/assets/blog-illustration.png"
-          width={100}
-          height={100}
-          alt="Blog illustration"
-          className="w-[80px] md:w-[120px] lg:w-[160]"
-        />
-        <Heading size="xl" className="text-center">
-          {"Postani partner Kluba Ada"}
-        </Heading>
+        <div className="flex flex-col gap-2 items-center">
+          <Image
+            src="/assets/partners-illustration.png"
+            width={100}
+            height={100}
+            alt="Partners illustration"
+            className="w-[80px] md:w-[120px] lg:w-[160]"
+          />
+          <Heading size="xl" className="text-center">
+            {"Postani partner Kluba Ada"}
+          </Heading>
+        </div>
         <Paragraph size="lg" className="max-w-2xl text-center">
           {
             "Partnerstvo s Klubom Ada ponuja priložnost za sodelovanje pri oblikovanju dogodkov in promocijskih aktivnostih. Sodelovanje omogoča dostop do skupnosti, ki združuje ženske z različnimi stopnjami znanja in izkušnjami na področju tehnologije."

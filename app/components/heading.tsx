@@ -26,6 +26,7 @@ const baseHeading = tv({
       black: "text-black",
       white: "text-white",
       pink: "text-pink",
+      red: "text-red",
     },
     truncate: {
       true: "truncate",
@@ -45,7 +46,7 @@ interface HeadingOptions {
    * @default 'black'
    */
 
-  color?: "black" | "white" | "pink";
+  color?: "black" | "white" | "pink" | "red";
   /**
    * Sets the line height of the paragraph
    * @default 'normal'

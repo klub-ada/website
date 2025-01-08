@@ -57,7 +57,7 @@ interface ParagraphOptions {
   weight?: "regular" | "medium" | "semiBold" | "bold" | "extraBold";
   /**
    * Sets the line height of the paragraph
-   * @default 'none'
+   * @default 'tight'
    */
   lineHeight?: "tight" | "none" | "normal";
   /**
@@ -86,7 +86,7 @@ export const Paragraph = forwardRef(
       children,
       size = "md",
       color = "black",
-      lineHeight = "none",
+      lineHeight = "tight",
       textAlign = "left",
       weight = "medium",
       shouldTruncate,
