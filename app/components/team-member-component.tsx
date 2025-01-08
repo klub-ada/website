@@ -17,8 +17,8 @@ const TeamMemberComponent = ({ member }: TeamMemberProps) => {
       <div className="flex flex-col h-full gap-4">
         <Image
           src={imageSrc}
-          width={500}
-          height={500}
+          width={700}
+          height={700}
           alt={member.image.alt}
           className="w-full object-cover md:aspect-square rounded-2xl"
         />
