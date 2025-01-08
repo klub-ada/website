@@ -24,17 +24,3 @@ export interface TeamMember {
   linkedin: string;
   _id: string;
 }
-
-export interface Event {
-  title: string;
-  slug: {
-    current: string;
-  };
-  eventTime: string;
-  description: any;
-  _id: string;
-  eventImage: {
-    url: string;
-    alt: string;
-  };
-}
