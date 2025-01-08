@@ -15,3 +15,12 @@ export interface Category {
   slug: { current: string };
   _id: string;
 }
+
+export interface TeamMember {
+  name: string;
+  role: string;
+  image: any;
+  bio: string;
+  linkedin: string;
+  _id: string;
+}

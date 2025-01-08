@@ -51,7 +51,7 @@ export function Reviews() {
                 <div className="flex flex-col h-full justify-between gap-5 md:gap-10">
                   <Paragraph size="lg" weight="semiBold">
                     {
-                      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."'
+                      '"Čeprav sem se udeležila le enega dogodka, me je že ta navdušil. Dogodek je bil odlično organiziran, z aktualnimi temami in izjemnimi gostjami. Srečala sem ženske s podobnimi izkušnjami, kar mi je dalo zagon za nadaljnje učenje in delo. Vesela sem, da pri nas obstaja takšna skupnost, kjer najdeš podporo in nasvete za karierno pot. Priporočam tudi pridružitev Discord skupini za še več povezovanja in izmenjave izkušenj."'
                     }
                   </Paragraph>
                   <div className="flex gap-3 items-center">
@@ -77,19 +77,21 @@ export function Reviews() {
                 <div className="flex flex-col h-full justify-between gap-5 md:gap-10">
                   <Paragraph size="lg" weight="semiBold">
                     {
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                      '"Klub Ada navdihuje mlade, pa tudi manj mlade. So zagnana ekipa z veliko idej, ki jih z lahkoto tekom leta realizirajo v uspešne dogodke in projekte. Stvari počno z srcem. Zato jih podpiram in želim uspešno tudi v prihodnje!"'
                     }
                   </Paragraph>
                   <div className="flex gap-3 items-center">
                     <Image
-                      src="/assets/marusa-kerpan.jpeg"
+                      src="/assets/tamara-stumperger.jpeg"
                       width={500}
                       height={500}
-                      alt="Marusa Kerpan profile picture"
+                      alt="Tamara Štumperger picture"
                       className="rounded-full max-w-11 max-h-11 object-cover border border-blue"
                     />
                     <Paragraph size="lg" weight="medium">
-                      {"Maruša Kerpan, Automation Engineer @ Domel"}
+                      {
+                        "Tamara Štumperger, Supplier Quality System Senior Manager @ Danfoss"
+                      }
                     </Paragraph>
                   </div>
                 </div>
