@@ -16,24 +16,18 @@ export function ActivityCard({
   imageAlt,
 }: ActivityCardProps) {
   return (
-    <article
-      className={
-        "flex flex-col gap-6 bg-white rounded-2xl border border-black p-6 xl:p-8 ${className}"
-      }
-    >
+    <div className="flex flex-col gap-6 bg-white rounded-2xl border border-black p-6 h-full justify-between">
       <div className="flex flex-col gap-4">
         <Heading size="sm">{title}</Heading>
-        <Paragraph size="lg" weight="regular">
-          {description}
-        </Paragraph>
+        <Paragraph lineHeight="tight">{description}</Paragraph>
       </div>
       <Image
         src={imageSrc}
         width={400}
         height={400}
         alt={imageAlt}
-        className="h-80 w-full object-cover md:h-full md:w-full rounded-2xl"
+        className="w-full object-cover md:aspect-square rounded-2xl"
       />
-    </article>
+    </div>
   );
 }
