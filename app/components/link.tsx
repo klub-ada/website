@@ -7,11 +7,11 @@ const linkBase = tv({
   variants: {
     variant: {
       primary:
-        "text-sm font-medium text-black hover:text-red select-none outline-none whitespace-nowrap",
+        "text-sm font-medium text-black select-none outline-none whitespace-nowrap",
       secondary:
-        "text-md font-medium text-black hover:text-red select-none outline-none whitespace-nowrap",
+        "text-md font-medium text-black select-none outline-none whitespace-nowrap",
       tertiary:
-        "text-lg font-medium text-black hover:text-red select-none outline-none whitespace-nowrap",
+        "text-lg font-medium text-black select-none outline-none whitespace-nowrap",
     },
   },
 });
@@ -48,7 +48,7 @@ export const Link = forwardRef(
       <NextLink
         ref={forwardedRef}
         href={href}
-        className={linkBase({ variant })}
+        className={`${linkBase({ variant })} underline-animation`}
         {...externalProps}
         {...restProps}
       >
