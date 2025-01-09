@@ -2,8 +2,8 @@ import { forwardRef } from "react";
 import { ForwardRefComponent, PropsOf } from "../utils/polymorphic";
 import { tv } from "tailwind-variants";
 import { Paragraph } from "./paragraph";
-import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import NextLink from "next/link";
+import { IconArrowRight } from "@tabler/icons-react";
 
 const baseCtaLink = tv({
   base: "flex flex-col grow p-6 gap-6 justify-between min-h-40 h-full select-none rounded-2xl font-button font-medium outline-none border border-black hover:shadow-button text-start transition-all duration-200 ease-in-out transform hover:shadow-button hover:-translate-y-1 hover:translate-x-1",
@@ -13,6 +13,7 @@ const baseCtaLink = tv({
       blue: "bg-blue",
       yellow: "bg-yellow",
       beige: "bg-beige",
+      pink: "bg-pink",
     },
   },
 });
@@ -22,7 +23,7 @@ interface CtaLinkOptions {
    * The color of the cta link
    * @default 'red'
    */
-  color?: "red" | "blue" | "yellow" | "beige";
+  color?: "red" | "blue" | "yellow" | "beige" | "pink";
   /**
    * Label to display on the cta link
    */
@@ -58,7 +59,7 @@ export const CtaLink = forwardRef(
         ref={forwardedRef}
         href={href}
         {...externalProps}
-        className={baseCtaLink({ color })}
+        className={`${baseCtaLink({ color })} group`}
         {...rest}
       >
         <div className="max-w-[95%] lg:max-w-[50%] min-w-[100px]">
@@ -71,7 +72,7 @@ export const CtaLink = forwardRef(
             {description}
           </Paragraph>
           <div className="self-end border border-black rounded-lg p-2 md:p-3">
-            <ArrowRightIcon className="w-4 h-4 text-black" />
+            <IconArrowRight className="w-4 h-4 text-black transform transition-transform duration-300 group-hover:-rotate-45" />
           </div>
         </div>
       </NextLink>

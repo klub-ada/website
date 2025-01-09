@@ -6,6 +6,7 @@ type CardProps = {
     | "bg-red"
     | "bg-blue"
     | "bg-pink"
+    | "bg-yellow"
     | "bg-red100"
     | "bg-blue100"
     | "bg-blue200";
