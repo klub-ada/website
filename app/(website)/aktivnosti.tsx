@@ -7,8 +7,7 @@ import { SanityDocument } from "next-sanity";
 import imageLoader from "../utils/image-loader";
 
 const ACTIVITIES_QUERY = `*[
-  _type == "activity"
-]`;
+  _type == "activity"] | order(_updatedAt desc)`;
 
 export async function Aktivnosti() {
   const activities = await client.fetch<SanityDocument[]>(ACTIVITIES_QUERY);
