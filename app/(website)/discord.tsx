@@ -9,21 +9,31 @@ import { Card } from "../components/card";
 export function Discord() {
   return (
     <PageWrapper>
-      <div className="flex justify-center items-center">
+      <>
         <Card bgColor="bg-yellow">
-          <div className="flex flex-col h-full justify-between gap-5 md:gap-10 mx-auto">
-            <div className="flex flex-col gap-4 text-ceneter">
-              <div className="flex gap-4 items-center">
-                <Image
-                  src="/assets/discord-icon.svg"
-                  width={50}
-                  height={50}
-                  alt="Discord Icon"
-                  className="object-cover"
-                />
-                <Heading size="sm">{"Pridruži se naši skupnosti"}</Heading>
-              </div>
-              <Paragraph size="md" className="max-w-xl">
+          <div className="flex flex-col-reverse md:flex-row items-left md:items-center justify-start gap-5 md:gap-10">
+            <div className="h-full lg:basis-3/5">
+              <Image
+                src="/assets/discord-image.png"
+                width={730}
+                height={600}
+                alt="Discord Image"
+                className="w-full object-cover rounded-2xl"
+              />
+            </div>
+            <div className="flex flex-col justify-start gap-4 grow basis-2/5">
+              <Image
+                src="/assets/discord-icon.svg"
+                width={50}
+                height={50}
+                alt="Discord Icon"
+                className="object-cover"
+              />
+              <Heading size="sm" className="max-w-72">
+                {"Pridruži se naši skupnosti"}
+              </Heading>
+
+              <Paragraph size="md" className="max-w-sm">
                 {
                   "Naša Discord platforma je varen prostor za izmenjavo idej, zanimivih tem, dogodkov, uporabnih virov in priložnosti za osebni in karierni razvoj."
                 }
@@ -34,18 +44,9 @@ export function Discord() {
                 </LinkButton>
               </div>
             </div>
-            <div className="flex flex-col gap-2">
-              <Image
-                src="/assets/discord-image.png"
-                width={800}
-                height={600}
-                alt="Discord Image"
-                className="w-full max-h-[450px] object-cover"
-              />
-            </div>
           </div>
         </Card>
-      </div>
+      </>
     </PageWrapper>
   );
 }
