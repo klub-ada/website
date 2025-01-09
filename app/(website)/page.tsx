@@ -5,6 +5,7 @@ import { Reviews } from "./reviews";
 import { TopBlogs } from "./top-blogs";
 import { Footer } from "../components/footer";
 import { Logos } from "./logos";
+import { Discord } from "./discord";
 export default function Page() {
   return (
     <>
@@ -13,6 +14,7 @@ export default function Page() {
       <NaslednjiDogodek />
       <Aktivnosti />
       <Reviews />
+      <Discord />
       <TopBlogs />
       <Footer />
     </>
