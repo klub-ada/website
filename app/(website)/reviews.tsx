@@ -35,27 +35,26 @@ const reviews = [
       'Udeležba na delavnicah mi je dala priložnost, da se povežem z drugimi ženskami v tehnologiji, pridobim nova znanja in predvsem samozavest, da nadaljujem svojo kariero."',
     image: "/assets/tamara-stumperger.jpeg",
     alt: "Jana Vovk profile picture",
-    title: "Jana Vovk, Supplier Quality System Senior Manager @ Danfoss",
+    title: "Jana Vovk, Student @ FRI",
   },
   {
     id: 4,
     paragraph:
-      '"Čeprav sem se udeležila le enega dogodka, me je že ta navdušil. Dogodek je bil odlično organiziran, z aktualnimi temami in izjemnimi gostjami. Srečala sem ženske s podobnimi izkušnjami, kar mi je dalo zagon za nadaljnje učenje in delo. Vesela sem, da pri nas obstaja takšna skupnost, kjer najdeš podporo in nasvete za karierno pot.',
-    emphasis:
-      'Priporočam tudi pridružitev Discord skupini za še več povezovanja in izmenjave izkušenj."',
-    image: "/assets/marusa-kerpan.jpeg",
-    alt: "Marusa Kerpan profile picture",
-    title: "Maruša Kerpan, Automation Engineer @ Domel",
+      '"Pred nekaj meseci sem potrebovala kakšen nasvet pri iskanju prve zaposlitve in res kapa dol za vso pomoč, podporo in nasvete, ki sem jih dobila. Tudi sami dogodki so odlično preživet čas v družbi ambicioznih, pozitivno naravnanih žensk v tehnologiji. Klub Ada Discord skupnost je tudi zakladnica za tiste, ki iščejo motivacijo, zaposlitev, izobraževanje ali pa samo dobro knjigo.',
+    emphasis: 'Moja izkušnja s Klubom Ada je sama pozitiva!"',
+    image: "/assets/nika-likar.jpeg",
+    alt: "Nika Likar profile picture",
+    title: "Nika Likar, UX Designer @ Omnia8",
   },
   {
     id: 5,
     paragraph:
-      '"Čeprav sem se udeležila le enega dogodka, me je že ta navdušil. Dogodek je bil odlično organiziran, z aktualnimi temami in izjemnimi gostjami. Srečala sem ženske s podobnimi izkušnjami, kar mi je dalo zagon za nadaljnje učenje in delo. Vesela sem, da pri nas obstaja takšna skupnost, kjer najdeš podporo in nasvete za karierno pot.',
+      '"S pomočjo kanala Kluba Ada sem izvedela za številne zanimive dogodke, ki so mi omogočila, da se družim in stkem nova prijateljstva z izjemnimi ženskami iz IT sveta. Nazadnje smo se srečale kar v Berlinu in skupaj preživele lep dan.',
     emphasis:
-      'Priporočam tudi pridružitev Discord skupini za še več povezovanja in izmenjave izkušenj."',
-    image: "/assets/marusa-kerpan.jpeg",
-    alt: "Marusa Kerpan profile picture",
-    title: "Maruša Kerpan, Automation Engineer @ Domel",
+      'Res je lep občutek biti del združenja, kjer si podprt s podobno mislečimi ženskami, ki te razumejo in spodbujajo."',
+    image: "/assets/tamara-demir.jpeg",
+    alt: "Tamara Demir profile picture",
+    title: "Tamara Demir, Web Developer @ ENKI",
   },
 ];
 export function Reviews() {
