@@ -11,15 +11,15 @@ export async function TopBlogs() {
   const pinnedPosts: Post[] = await getPinnedPosts();
 
   return (
-    <PageWrapper hasNoBottomPadding bgColor="bg-white">
+    <PageWrapper bgColor="bg-pink">
       <div className="flex flex-col gap-8 md:gap-16">
         <div className="flex flex-col gap-8">
           <div className="max-w-sm md:max-w-2xl">
-            <Heading size="lg">Najnovejši blogi</Heading>
+            <Heading size="lg">Najnovejše objave</Heading>
           </div>
           <div className="">
-            <Button size="md" variant="primary">
-              Preberi vse bloge
+            <Button size="md" variant="secondary">
+              Preberi naš blog
             </Button>
           </div>
         </div>

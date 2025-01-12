@@ -12,6 +12,7 @@ const baseParagraph = tv({
       md: "text-sm md:text-base",
       lg: "text-base md:text-lg",
       xl: "text-lg md:text-[22px]",
+      xxl: "text-2xl md:text-3xl",
     },
     weight: {
       regular: "font-normal",
@@ -21,9 +22,9 @@ const baseParagraph = tv({
       extraBold: "font-extrabold",
     },
     lineHeight: {
-      tight: "leading-5",
-      none: "leading-6",
-      normal: "leading-7",
+      tight: "leading-4",
+      none: "leading-5",
+      normal: "leading-6",
     },
     textAlign: {
       left: "text-left",
@@ -35,6 +36,7 @@ const baseParagraph = tv({
       white: "text-white",
       gray: "gray300",
       pink: "text-pink",
+      blue: "text-blue",
     },
     truncate: {
       true: "truncate",
@@ -48,7 +50,7 @@ interface ParagraphOptions {
    *
    * @default 'md'
    */
-  size?: "xl" | "lg" | "md" | "sm" | "xs";
+  size?: "xxl" | "xl" | "lg" | "md" | "sm" | "xs";
   /**
    * Sets the font weight of the paragraph.
    *
@@ -57,14 +59,14 @@ interface ParagraphOptions {
   weight?: "regular" | "medium" | "semiBold" | "bold" | "extraBold";
   /**
    * Sets the line height of the paragraph
-   * @default 'tight'
+   * @default 'none'
    */
   lineHeight?: "tight" | "none" | "normal";
   /**
    * Sets the line hight of the paragraph
    * @default 'black'
    */
-  color?: "black" | "white" | "gray" | "pink";
+  color?: "black" | "white" | "gray" | "pink" | "blue";
   /**
    * Truncates the paragraph if true
    */

@@ -46,10 +46,6 @@ export interface ButtonOptions {
    * Icon to display after the button label
    */
   iconRight?: ElementType;
-  /**
-   * Icon to display before the button label
-   */
-  iconLeft?: ElementType;
 }
 
 type PolymorphicButton = ForwardRefComponent<"button", ButtonOptions>;
@@ -65,7 +61,6 @@ export const Button = forwardRef(
       isDisabled = false,
       disabled: hasHtmlDisabledProp,
       iconRight: IconRight,
-      iconLeft: IconLeft,
       ...rest
     },
     forwardedRef
@@ -84,7 +79,6 @@ export const Button = forwardRef(
         })}
         {...rest}
       >
-        {IconLeft && <IconLeft className="w-4 h-4" />}
         {children}
         {IconRight && <IconRight className="w-4 h-4" />}
       </button>
