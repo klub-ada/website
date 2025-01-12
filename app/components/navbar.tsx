@@ -44,7 +44,9 @@ export function Navbar() {
         </li>
       </ol>
       <div className="hidden md:block">
-        <Button size="md">Vsi dogodki</Button>
+        <Button size="md" href="/dogodki">
+          Vsi dogodki
+        </Button>
       </div>
       <NavbarMenu />
     </nav>
