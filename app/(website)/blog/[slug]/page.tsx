@@ -8,8 +8,7 @@ import { Post } from "@/app/utils/interface";
 import { client } from "@/sanity/lib/client";
 import { PortableText, PortableTextComponents } from "next-sanity";
 import React from "react";
-import { formatDate } from "../../../utils/date";
-import { NewsletterComponent } from "@/app/components/newsletter-component";
+import { formatDate } from "@/app/utils/date";
 
 interface Params {
   params: {
@@ -39,30 +38,42 @@ async function getPost(slug: string) {
 const BlogArticle = async ({ params }: Params) => {
   const post: Post = await getPost(params.slug);
   const imageSrc = imageLoader(post.mainImage);
+  const formattedDate = formatDate(post.publishedAt);
 
   const portableTextComponents: Partial<PortableTextComponents> = {
     block: {
       h1: ({ children }) => (
-        <Heading size="md" color="black" textAlign="left" className="my-5">
+        <Heading
+          size="md"
+          color="black"
+          textAlign="left"
+          className="mt-12 mb-2"
+        >
           {children}
         </Heading>
       ),
       h2: ({ children }) => (
-        <Heading size="sm" color="black" textAlign="left" className="my-4">
-          {children}
-        </Heading>
-      ),
-      h3: ({ children }) => (
-        <Heading size="xs" color="black" textAlign="left" className="my-3">
-          {children}
-        </Heading>
-      ),
-      bodyXl: ({ children }) => (
-        <Paragraph size="xl" color="black" textAlign="left" className="my-8">
+        <Paragraph
+          size="xxl"
+          color="black"
+          weight="bold"
+          textAlign="left"
+          className="mt-10 mb-2"
+        >
           {children}
         </Paragraph>
       ),
-      bodyLg: ({ children }) => (
+      h3: ({ children }) => (
+        <Paragraph
+          size="xl"
+          color="black"
+          textAlign="left"
+          className="mt-6 mb-2"
+        >
+          {children}
+        </Paragraph>
+      ),
+      body: ({ children }) => (
         <Paragraph size="lg" color="black" textAlign="left" className="mb-6">
           {children}
         </Paragraph>
@@ -83,7 +94,7 @@ const BlogArticle = async ({ params }: Params) => {
     },
     list: {
       bullet: ({ children }) => (
-        <ul className="list-disc pl-4 [&_p]:mb-0">{children}</ul>
+        <ul className="list-disc pl-4 [&_p]:mb-1">{children}</ul>
       ),
     },
 
@@ -99,40 +110,63 @@ const BlogArticle = async ({ params }: Params) => {
           href={value?.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 underline hover:text-blue-700"
+          className="text-black underline underline-offset-2	hover:text-pink"
+          style={{ textDecorationColor: "pink" }}
         >
           {children}
         </a>
       ),
     },
+    types: {
+      image: ({ value }) => {
+        console.log("Image value:", value); // Log the entire value object
+        if (!value || !value.asset || !value.asset.url) {
+          console.error("Invalid image value:", value);
+          return null;
+        }
+        return (
+          <div className="my-4">
+            <Image
+              src={value.asset._ref}
+              alt={value.alt}
+              width={800}
+              height={600}
+              className="w-full object-cover rounded-lg"
+            />
+          </div>
+        );
+      },
+    },
   };
 
   return (
     <>
-      <PageWrapper>
-        <div className="max-w-3xl mx-auto p-6 gap-10">
-          <div className="flex gap-2">
-            {post.categories.map((category) => (
-              <Paragraph
-                size="xs"
-                className="py-1 px-2 text-pink font-semibold bg-white border border-black rounded-lg"
-              >
-                {category.title}
-              </Paragraph>
-            ))}
-          </div>
+      <PageWrapper hasNoTopPadding>
+        <div className="max-w-3xl mx-auto p-6 gap-10 pt-16">
+          <div className="flex flex-col gap-4">
+            <div className="flex gap-2">
+              {post.categories.map((category) => (
+                <Paragraph
+                  size="xs"
+                  className="py-1 px-2 text-white font-semibold bg-pink border border-black rounded-lg"
+                >
+                  {category.title}
+                </Paragraph>
+              ))}
+            </div>
 
-          <Heading size="lg" color="black" className="mb-10">
-            {post.title}
-          </Heading>
-          <span>{`${post.publishedAt}`}</span>
-          <Image
-            src={imageSrc}
-            width={500}
-            height={500}
-            alt={post.mainImage.alt}
-            className="w-full object-cover h-96 rounded-2xl border border-black mb-6"
-          />
+            <Heading size="lg" color="black">
+              {post.title}
+            </Heading>
+            <Paragraph>{formattedDate}</Paragraph>
+            <Image
+              src={imageSrc}
+              width={500}
+              height={500}
+              alt={post.mainImage.alt}
+              className="w-full object-cover h-96 rounded-2xl border border-black mb-6"
+            />
+          </div>
           <PortableText value={post.body} components={portableTextComponents} />
         </div>
       </PageWrapper>
