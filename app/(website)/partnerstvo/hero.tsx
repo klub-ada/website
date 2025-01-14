@@ -1,4 +1,3 @@
-import { Button } from "@/app/components/button";
 import { Heading } from "@/app/components/heading";
 import { LinkButton } from "@/app/components/link-button";
 import { PageWrapper } from "@/app/components/page-wrapper";
@@ -8,7 +7,7 @@ import Image from "next/image";
 export function Hero() {
   return (
     <PageWrapper>
-      <div className="flex flex-col pb-10 md:pb-20 px-8 md:px-16 gap-6 items-center">
+      <div className="flex flex-col pb-10 md:pb-20 md:px-16 gap-6 items-center">
         <div className="flex flex-col gap-2 items-center">
           <Image
             src="/assets/partners-illustration.png"

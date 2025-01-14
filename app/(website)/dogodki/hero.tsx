@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <PageWrapper>
-      <div className="flex flex-col pb-10 md:pb-20 px-8 md:px-16 gap-6 items-center">
+      <div className="flex flex-col pb-10 md:pb-20 md:px-16 gap-6 items-center">
         <div className="flex flex-col gap-2 items-center">
           <Image
             src="/assets/calendar-illustration.png"
@@ -30,8 +30,8 @@ export default function Hero() {
           {"Naslednji dogodek"}
         </LinkButton>
       </div>
-      <div className="flex flex-col gap-4">
-        <div className="flex gap-4">
+      <div className="flex flex-col gap-2 md:gap-4">
+        <div className="flex gap-2 md:gap-4">
           <Image
             src="/assets/dogodek-1.png"
             width={500}
