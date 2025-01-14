@@ -17,22 +17,7 @@ export function NewsletterComponent() {
             </Paragraph>
           </div>
           <div className="flex flex-col gap-2">
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Vpiši svoj e-naslov"
-                className="w-full px-4 py-2 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-pink300"
-                required
-              />
-              <Button variant="primary" size="md">
-                {"Prijavi se"}
-              </Button>
-            </div>
-            <Paragraph size="xs" color="gray" className="">
-              {
-                "Strinjam se, da mi Klub Ada po e-pošti pošilja novičnik in druga obvestila."
-              }
-            </Paragraph>
+            <div className="ml-embedded" data-form="14J8zj"></div>
           </div>
         </div>
       </div>

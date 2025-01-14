@@ -96,3 +96,47 @@ body {
 .underline-animation:hover::after {
   width: 100%;
 }
+
+#mlb2-9478951.ml-form-embedContainer
+  .ml-form-embedWrapper
+  .ml-form-embedBody.ml-form-embedBodyHorizontal {
+  padding: 0;
+}
+
+#mlb2-9478951.ml-form-embedContainer
+  .ml-form-embedWrapper
+  .ml-form-embedBody
+  .ml-form-checkboxRow
+  label
+  p:first-child {
+  font-family: "Anaheim" !important;
+}
+
+#mlb2-9478951.ml-form-embedContainer
+  .ml-form-embedWrapper
+  .ml-form-embedBody
+  .ml-form-horizontalRow
+  input {
+  font-family: "Anaheim" !important;
+}
+
+#mlb2-9478951.ml-form-embedContainer
+  .ml-form-embedWrapper
+  .ml-form-embedBody
+  .ml-form-horizontalRow
+  button {
+  font-family: "Anaheim" !important;
+  border-color: black !important;
+  transform: translate(0, 0) 0 0 0 1 1;
+}
+
+#mlb2-9478951.ml-form-embedContainer
+  .ml-form-embedWrapper
+  .ml-form-embedBody
+  .ml-form-horizontalRow
+  .primary
+  button:hover {
+  box-shadow: -4px 4px black;
+  transform: translate(0.25rem, -0.25rem);
+  border-color: black !important;
+}
