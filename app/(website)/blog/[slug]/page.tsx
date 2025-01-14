@@ -119,19 +119,17 @@ const BlogArticle = async ({ params }: Params) => {
     },
     types: {
       image: ({ value }) => {
-        console.log("Image value:", value); // Log the entire value object
-        if (!value || !value.asset || !value.asset.url) {
-          console.error("Invalid image value:", value);
+        if (!value) {
           return null;
         }
         return (
           <div className="my-4">
             <Image
-              src={value.asset._ref}
+              src={imageLoader(value)}
               alt={value.alt}
-              width={800}
-              height={600}
-              className="w-full object-cover rounded-lg"
+              width={200}
+              height={400}
+              className="w-32 object-cover rounded-lg"
             />
           </div>
         );
