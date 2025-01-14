@@ -71,15 +71,21 @@ export function Footer() {
                 {"O nas"}
               </Paragraph>
               <div className="flex flex-col gap-2">
-                <Link variant="secondary" href="./page">
-                  {"Spoznaj Klub Ada"}
-                </Link>
-                <Link variant="secondary" href="./page">
-                  {"Zgodovina"}
-                </Link>
-                <Link variant="secondary" href="./page">
-                  {"Doniraj nam"}
-                </Link>
+                <div>
+                  <Link variant="secondary" href="/o-nas">
+                    {"Spoznaj Klub Ada"}
+                  </Link>
+                </div>
+                <div>
+                  <Link variant="secondary" href="/o-nas">
+                    {"Zgodovina"}
+                  </Link>
+                </div>
+                <div>
+                  <Link variant="secondary" href="/o-nas">
+                    {"Doniraj nam"}
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -88,15 +94,21 @@ export function Footer() {
                 {"Aktivnosti"}
               </Paragraph>
               <div className="flex flex-col gap-2">
-                <Link variant="secondary" href="./page">
-                  {"Dogodki"}
-                </Link>
-                <Link variant="secondary" href="./page">
-                  {"Blog"}
-                </Link>
-                <Link variant="secondary" href="./page">
-                  {"Partnerstva"}
-                </Link>
+                <div>
+                  <Link variant="secondary" href="/dogodki">
+                    {"Dogodki"}
+                  </Link>
+                </div>
+                <div>
+                  <Link variant="secondary" href="/blog">
+                    {"Blog"}
+                  </Link>
+                </div>
+                <div>
+                  <Link variant="secondary" href="/partnerstvo">
+                    {"Partnerstva"}
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -105,15 +117,33 @@ export function Footer() {
                 {"Pridruži se nam"}
               </Paragraph>
               <div className="flex flex-col gap-2">
-                <Link variant="secondary" href="./page">
-                  {"Discord"}
-                </Link>
-                <Link variant="secondary" href="./page">
-                  {"LinkedIn"}
-                </Link>
-                <Link variant="secondary" href="./page">
-                  {"Instagram"}
-                </Link>
+                <div>
+                  <Link
+                    variant="secondary"
+                    href="https://forms.gle/camdd2joyHi9kAZt5"
+                    isExternal
+                  >
+                    {"Discord"}
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    variant="secondary"
+                    href="https://www.linkedin.com/company/klub-ada/posts/"
+                    isExternal
+                  >
+                    {"LinkedIn"}
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    variant="secondary"
+                    href="https://www.instagram.com/klub_ada/"
+                    isExternal
+                  >
+                    {"Instagram"}
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

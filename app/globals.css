@@ -79,7 +79,7 @@ body {
 
 .underline-animation {
   position: relative;
-  display: inline-block;
+  display: inline;
 }
 
 .underline-animation::after {
@@ -101,6 +101,17 @@ body {
   .ml-form-embedWrapper
   .ml-form-embedBody.ml-form-embedBodyHorizontal {
   padding: 0;
+}
+
+#mlb2-9478951.ml-form-embedContainer
+  .ml-form-embedWrapper
+  .ml-form-embedBody
+  .ml-form-formContent,
+#mlb2-9478951.ml-form-embedContainer
+  .ml-form-embedWrapper
+  .ml-form-embedBody
+  .ml-form-checkboxRow {
+  margin: 0 !important;
 }
 
 #mlb2-9478951.ml-form-embedContainer
