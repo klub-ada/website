@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Button } from "../components/button";
 import { Heading } from "../components/heading";
 import { PageWrapper } from "../components/page-wrapper";
 import { Card } from "../components/card";
@@ -14,7 +13,7 @@ const NEXT_EVENT_QUERY = `*[
   _type == "event" && eventTime >= $today
 ] | order(eventTime) [0] {title, description, eventImage, location, applyLink, eventTime}`;
 
-export async function NaslednjiDogodek() {
+export async function NextEvent() {
   const today = new Date().toISOString().split("T")[0];
   const nextEvent = await client.fetch<SanityDocument>(NEXT_EVENT_QUERY, {
     today,
@@ -27,15 +26,15 @@ export async function NaslednjiDogodek() {
 
   return (
     <PageWrapper bgColor="bg-red">
-      <div className="flex flex-col gap-8 md:gap-16">
+      <div id="next-event" className="flex flex-col gap-8 md:gap-16">
         <div className="flex flex-col gap-8">
           <div className="max-w-sm md:max-w-xl">
             <Heading size="lg">{"Pridi na naš naslednji dogodek!"}</Heading>
           </div>
           <div className="">
-            <Button size="md" variant="secondary">
+            <LinkButton size="md" variant="secondary" href="/dogodki">
               Vsi dogodki
-            </Button>
+            </LinkButton>
           </div>
         </div>
         <Card bgColor="bg-red100">
@@ -60,7 +59,12 @@ export async function NaslednjiDogodek() {
                 </Paragraph>
               </div>
               <div className="">
-                <LinkButton size="md" href={nextEvent.applyLink} isExternal>
+                <LinkButton
+                  size="md"
+                  showIcon
+                  href={nextEvent.applyLink}
+                  isExternal
+                >
                   Pridruži se
                 </LinkButton>
               </div>

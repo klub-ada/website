@@ -1,13 +1,13 @@
 import { Footer } from "@/app/components/footer";
 import Hero from "./hero";
-import { NaslednjiDogodek } from "../naslednji-dogodek";
+import { NextEvent } from "../next-event";
 import PastEvents from "./past-events";
 
 export default function Page() {
   return (
     <>
       <Hero />
-      <NaslednjiDogodek />
+      <NextEvent />
       <PastEvents />
       <Footer />
     </>

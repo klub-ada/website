@@ -1,5 +1,5 @@
 import { Hero } from "./hero";
-import { NaslednjiDogodek } from "./naslednji-dogodek";
+import { NextEvent } from "./next-event";
 import { Aktivnosti } from "./aktivnosti";
 import { Reviews } from "./reviews";
 import { TopBlogs } from "./top-blogs";
@@ -11,7 +11,7 @@ export default function Page() {
     <>
       <Hero />
       <Logos />
-      <NaslednjiDogodek />
+      <NextEvent />
       <Aktivnosti />
       <Reviews />
       <Discord />
