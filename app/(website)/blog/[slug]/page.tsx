@@ -110,7 +110,7 @@ const BlogArticle = async ({ params }: Params) => {
           href={value?.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black underline underline-offset-2	hover:text-pink"
+          className="text-black underline underline-offset-2 font-medium	 hover:text-pink"
           style={{ textDecorationColor: "pink" }}
         >
           {children}
@@ -127,9 +127,9 @@ const BlogArticle = async ({ params }: Params) => {
             <Image
               src={imageLoader(value)}
               alt={value.alt}
-              width={200}
-              height={400}
-              className="w-32 object-cover rounded-lg"
+              width={700}
+              height={700}
+              className="w-full object-cover max-h-96 rounded-2xl border border-black mb-6"
             />
           </div>
         );
@@ -140,7 +140,7 @@ const BlogArticle = async ({ params }: Params) => {
   return (
     <>
       <PageWrapper hasNoTopPadding>
-        <div className="max-w-3xl mx-auto p-6 gap-10 pt-16">
+        <div className="max-w-3xl mx-auto md:p-6 gap-10 pt-8 md:pt-16">
           <div className="flex flex-col gap-4">
             <div className="flex gap-2">
               {post.categories.map((category) => (
@@ -156,13 +156,13 @@ const BlogArticle = async ({ params }: Params) => {
             <Heading size="lg" color="black">
               {post.title}
             </Heading>
-            <Paragraph>{formattedDate}</Paragraph>
+            <Paragraph size="lg">{formattedDate}</Paragraph>
             <Image
               src={imageSrc}
-              width={500}
-              height={500}
+              width={700}
+              height={700}
               alt={post.mainImage.alt}
-              className="w-full object-cover h-96 rounded-2xl border border-black mb-6"
+              className="w-full object-cover max-h-96 rounded-2xl border border-black mb-6"
             />
           </div>
           <PortableText value={post.body} components={portableTextComponents} />
