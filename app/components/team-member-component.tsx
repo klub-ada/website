@@ -26,7 +26,13 @@ const TeamMemberComponent = ({ member }: TeamMemberProps) => {
           <Heading size="xs">{member.name}</Heading>
           <div className="flex gap-2 items-center">
             <Paragraph size="xl">{member.role}</Paragraph>
-            <IconBrandLinkedinFilled color="black" size={24} stroke-width="2" />
+            <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+              <IconBrandLinkedinFilled
+                color="black"
+                size={24}
+                stroke-width="2"
+              />
+            </a>
           </div>
           <Paragraph lineHeight="tight">{member.bio}</Paragraph>
         </div>
