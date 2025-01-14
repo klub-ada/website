@@ -23,7 +23,7 @@ export default async function EventComponent({ event }: Props) {
   const imageSrc = imageLoader(event.eventImage);
   const formattedDate = formatDate(event.eventTime);
   const blogPost = await getEventBlog(event._id);
-  console.log(blogPost);
+
   return (
     <div className="flex flex-col bg-white gap-6 border border-black rounded-2xl p-4 lg:p-6 h-full justify-between">
       <div className="flex flex-col h-full justify-between gap-4">
@@ -33,21 +33,34 @@ export default async function EventComponent({ event }: Props) {
             width={500}
             height={500}
             alt={event.eventImage.alt}
-            className="w-full object-cover md:aspect-square rounded-2xl"
+            className="w-full object-cover aspect-[4/3] md:aspect-square rounded-2xl"
           />
           <Paragraph size="md">{formattedDate}</Paragraph>
           <Heading size="xs" lineHeight="tight">
             {event.title}
           </Heading>
         </div>
-        <div>
+        <div className="flex items-center justify-between">
+          <div>
+            {blogPost.length > 0 && (
+              <Link
+                variant="secondary"
+                href={`/blog/${blogPost[0].slug.current}`}
+              >
+                Preberi blog
+              </Link>
+            )}
+          </div>
           {blogPost.length > 0 && (
-            <Link
-              variant="secondary"
-              href={`/blog/${blogPost[0].slug.current}`}
-            >
-              Preberi blog
-            </Link>
+            <a href={`/blog/${blogPost[0]?.slug?.current}`}>
+              <Image
+                src="/assets/chevron-right-red.svg"
+                width={24}
+                height={24}
+                alt="Chevron right illustration"
+                className="cover-image"
+              />
+            </a>
           )}
         </div>
       </div>

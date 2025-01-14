@@ -42,7 +42,7 @@ export default async function Blogs() {
 
   return (
     <PageWrapper>
-      <div className="flex flex-col pb-10 md:pb-20 px-8 md:px-16 gap-6 items-center">
+      <div className="flex flex-col pb-10 md:pb-20 md:px-16 md:gap-6 items-center">
         <div className="flex flex-col gap-2 items-center">
           <Image
             src="/assets/blog-illustration.png"
@@ -51,7 +51,9 @@ export default async function Blogs() {
             alt="Blog illustration"
             className="w-[80px] md:w-[120px] lg:w-[160]"
           />
-          <Heading size="xl">{"Preberi naše članke"}</Heading>
+          <Heading size="xl" className="max-w-xl text-center">
+            {"Preberi naše članke"}
+          </Heading>
         </div>
         <Paragraph size="lg" className="max-w-xl text-center">
           {
