@@ -32,6 +32,7 @@ export const LinkButton = forwardRef(
       isExternal = false,
       size = "md",
       variant = "primary",
+      showIcon = true,
       ...restProps
     },
     forwardedRef
@@ -49,7 +50,9 @@ export const LinkButton = forwardRef(
         {...restProps}
       >
         {children}
-        <IconArrowRight className="w-4 h-4 transform transition-transform duration-300 group-hover:-rotate-45" />
+        {showIcon && (
+          <IconArrowRight className="w-4 h-4 transform transition-transform duration-300 group-hover:-rotate-45" />
+        )}
       </NextLink>
     );
   }
