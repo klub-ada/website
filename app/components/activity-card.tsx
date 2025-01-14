@@ -16,7 +16,7 @@ export function ActivityCard({
   imageAlt,
 }: ActivityCardProps) {
   return (
-    <div className="flex flex-col gap-6 bg-white rounded-2xl border border-black p-6 h-full justify-between">
+    <div className="flex flex-col gap-6 bg-white rounded-2xl border border-black p-4 lg:p-6 h-full justify-between">
       <div className="flex flex-col gap-4">
         <Heading size="sm">{title}</Heading>
         <Paragraph lineHeight="tight">{description}</Paragraph>

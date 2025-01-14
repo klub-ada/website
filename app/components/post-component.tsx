@@ -14,7 +14,7 @@ const PostComponent = ({ post }: Props) => {
 
   return (
     <Link href={`/blog/${post.slug.current}`} className="block h-full group">
-      <div className="flex flex-col bg-white gap-6 border border-black rounded-2xl p-6 h-full justify-between ${className}">
+      <div className="flex flex-col bg-white gap-6 border border-black rounded-2xl p-4 lg:p-6 h-full justify-between ${className}">
         <div className="flex flex-col h-full justify-between gap-4">
           <div className="flex flex-col gap-4">
             <Image

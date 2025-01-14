@@ -25,7 +25,7 @@ export function Card({
       : "items-start text-left";
   return (
     <article
-      className={`p-6 md:p-8 ${bgColor} grow rounded-2xl ${
+      className={`p-4 md:p-6 ${bgColor} grow rounded-2xl ${
         hasBorder ? "border border-black" : ""
       } flex flex-col ${alignmentClass}`}
     >

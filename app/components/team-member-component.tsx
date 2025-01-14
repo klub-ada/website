@@ -13,7 +13,7 @@ const TeamMemberComponent = ({ member }: TeamMemberProps) => {
   const imageSrc = imageLoader(member.image);
 
   return (
-    <div className="flex flex-col bg-white gap-6 border border-black rounded-2xl p-6 h-full justify-between">
+    <div className="flex flex-col bg-white gap-6 border border-black rounded-2xl p-4 lg:p-6 h-full justify-between">
       <div className="flex flex-col h-full gap-4">
         <Image
           src={imageSrc}
@@ -26,15 +26,20 @@ const TeamMemberComponent = ({ member }: TeamMemberProps) => {
           <Heading size="xs">{member.name}</Heading>
           <div className="flex gap-2 items-center">
             <Paragraph size="xl">{member.role}</Paragraph>
-            <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+            <a
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-red group"
+            >
               <IconBrandLinkedinFilled
-                color="black"
+                className="text-black group-hover:text-red"
                 size={24}
                 stroke-width="2"
               />
             </a>
           </div>
-          <Paragraph lineHeight="tight">{member.bio}</Paragraph>
+          <Paragraph>{member.bio}</Paragraph>
         </div>
       </div>
     </div>
