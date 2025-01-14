@@ -38,10 +38,19 @@ const PostComponent = ({ post }: Props) => {
               {post.title}
             </Heading>
           </div>
-          <div>
-            <Link variant="secondary" href={`/blog/${post.slug.current}`}>
-              Preberi blog
-            </Link>
+          <div className="flex items-center justify-between">
+            <div>
+              <Link variant="secondary" href={`/blog/${post.slug.current}`}>
+                Preberi blog
+              </Link>
+            </div>
+            <Image
+              src="/assets/chevron-right.svg"
+              width={24}
+              height={24}
+              alt="Chevron right illustration"
+              className="cover-image"
+            />
           </div>
         </div>
       </div>
