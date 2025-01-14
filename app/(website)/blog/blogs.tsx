@@ -60,9 +60,9 @@ export default async function Blogs() {
         </Paragraph>
       </div>
       {/* First 3 posts */}
-      <div className="flex gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {pinnedPosts.map((post) => (
-          <div key={post.slug.current} className="basis-1/3">
+          <div key={post.slug.current} className="col-span-1">
             <PostComponent post={post} />
           </div>
         ))}
@@ -74,9 +74,9 @@ export default async function Blogs() {
       </div>
 
       {/* Remaining Posts (4 to 10) */}
-      <div className="flex gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
-          <div key={post.slug.current} className="basis-1/3">
+          <div key={post.slug.current} className="col-span-1">
             <PostComponent post={post} />
           </div>
         ))}
