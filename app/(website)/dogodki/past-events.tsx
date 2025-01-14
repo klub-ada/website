@@ -10,12 +10,10 @@ export async function getEvents(today: string) {
   ] | order(eventTime) {
   title,
   description,
-  eventImage {
-    url,
-    alt
-  },
+  eventImage,
   slug,
   eventTime,
+  _id,
 }`;
   const data = await client.fetch(query, { today });
   return data;

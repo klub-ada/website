@@ -13,37 +13,39 @@ const PostComponent = ({ post }: Props) => {
   const imageSrc = imageLoader(post.mainImage);
 
   return (
-    <div className="flex flex-col bg-white gap-6 border border-black rounded-2xl p-6 h-full justify-between ${className}">
-      <div className="flex flex-col h-full justify-between gap-4">
-        <div className="flex flex-col gap-4">
-          <Image
-            src={imageSrc}
-            width={500}
-            height={500}
-            alt={post.mainImage.alt}
-            className="w-full object-cover md:aspect-square rounded-2xl"
-          />
-          <div className="flex gap-2">
-            {post.categories.map((category) => (
-              <Paragraph
-                size="xs"
-                className="py-1 px-2 text-white font-semibold bg-pink border border-black rounded-lg"
-              >
-                {category.title}
-              </Paragraph>
-            ))}
+    <Link href={`/blog/${post.slug.current}`} className="block h-full group">
+      <div className="flex flex-col bg-white gap-6 border border-black rounded-2xl p-6 h-full justify-between ${className}">
+        <div className="flex flex-col h-full justify-between gap-4">
+          <div className="flex flex-col gap-4">
+            <Image
+              src={imageSrc}
+              width={500}
+              height={500}
+              alt={post.mainImage.alt}
+              className="w-full object-cover md:aspect-square rounded-2xl"
+            />
+            <div className="flex gap-2">
+              {post.categories.map((category) => (
+                <Paragraph
+                  size="xs"
+                  className="py-1 px-2 text-white font-semibold bg-pink border border-black rounded-lg"
+                >
+                  {category.title}
+                </Paragraph>
+              ))}
+            </div>
+            <Heading size="xs" lineHeight="tight">
+              {post.title}
+            </Heading>
           </div>
-          <Heading size="xs" lineHeight="tight">
-            {post.title}
-          </Heading>
-        </div>
-        <div>
-          <Link variant="secondary" href={`/blog/${post.slug.current}`}>
-            Preberi blog
-          </Link>
+          <div>
+            <Link variant="secondary" href={`/blog/${post.slug.current}`}>
+              Preberi blog
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

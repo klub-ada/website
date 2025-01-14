@@ -48,7 +48,7 @@ export const Link = forwardRef(
       <NextLink
         ref={forwardedRef}
         href={href}
-        className={`${linkBase({ variant })} underline-animation`}
+        className={`${linkBase({ variant })} underline-animation group-hover:after:w-full`}
         {...externalProps}
         {...restProps}
       >

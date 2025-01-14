@@ -76,6 +76,12 @@ export const postType = defineType({
       type: "blockContent",
       validation: (Rule: any) => Rule.required(),
     }),
+    defineField({
+      name: "event",
+      title: "Event",
+      type: "reference",
+      to: { type: "event" },
+    }),
   ],
   preview: {
     select: {
