@@ -1,10 +1,7 @@
-import Image from "next/image";
-import { Button } from "../components/button";
-import { Card } from "../components/card";
 import { Heading } from "../components/heading";
 import { PageWrapper } from "../components/page-wrapper";
-import { Paragraph } from "../components/paragraph";
 import ReviewComponent from "../components/review-component";
+import { LinkButton } from "../components/link-button";
 
 const reviews = [
   {
@@ -68,9 +65,9 @@ export function Reviews() {
             </Heading>
           </div>
           <div className="">
-            <Button size="md" variant="secondary">
+            <LinkButton size="md" variant="secondary" href="/partnerstvo">
               Postani partner
-            </Button>
+            </LinkButton>
           </div>
         </div>
         <div className="flex flex-col gap-4">

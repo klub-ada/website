@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Button } from "../components/button";
 import { Heading } from "../components/heading";
 import { PageWrapper } from "../components/page-wrapper";
 import { Paragraph } from "../components/paragraph";
@@ -39,7 +38,13 @@ export function Discord() {
                 }
               </Paragraph>
               <div>
-                <LinkButton size="md" variant="secondary" href={"/"} isExternal>
+                <LinkButton
+                  size="md"
+                  variant="secondary"
+                  href={"https://forms.gle/camdd2joyHi9kAZt5"}
+                  isExternal
+                  showIcon
+                >
                   Pridruži se nam
                 </LinkButton>
               </div>

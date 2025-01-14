@@ -1,5 +1,6 @@
 import { Button } from "@/app/components/button";
 import { Heading } from "@/app/components/heading";
+import { LinkButton } from "@/app/components/link-button";
 import { PageWrapper } from "@/app/components/page-wrapper";
 import { Paragraph } from "@/app/components/paragraph";
 import Image from "next/image";
@@ -26,9 +27,9 @@ export function Hero() {
           }
         </Paragraph>
         <div className="">
-          <Button size="md" variant="secondary">
+          <LinkButton size="md" variant="secondary" href="#become-partner">
             {"Postani partner"}
-          </Button>
+          </LinkButton>
         </div>
       </div>
       <div>

@@ -1,9 +1,7 @@
-import { BlogCard } from "../components/blog-card";
-import { Button } from "../components/button";
 import { Heading } from "../components/heading";
+import { LinkButton } from "../components/link-button";
 import { PageWrapper } from "../components/page-wrapper";
 import PostComponent from "../components/post-component";
-import imageLoader from "../utils/image-loader";
 import { Post } from "../utils/interface";
 import { getPinnedPosts } from "./blog/blogs";
 
@@ -18,9 +16,14 @@ export async function TopBlogs() {
             <Heading size="lg">Najnovejše objave</Heading>
           </div>
           <div className="">
-            <Button size="md" variant="secondary">
+            <LinkButton
+              size="md"
+              variant="secondary"
+              href="
+            /blog"
+            >
               Preberi naš blog
-            </Button>
+            </LinkButton>
           </div>
         </div>
 

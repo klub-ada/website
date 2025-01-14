@@ -1,6 +1,5 @@
-import { Button } from "@/app/components/button";
-import { Card } from "@/app/components/card";
 import { Heading } from "@/app/components/heading";
+import { LinkButton } from "@/app/components/link-button";
 import { PageWrapper } from "@/app/components/page-wrapper";
 import { Paragraph } from "@/app/components/paragraph";
 
@@ -16,9 +15,15 @@ export function BecomePartner() {
               <span className="text-white font-medium">info@klub-ada.si</span>
             </Paragraph>
           </div>
-          <Button size="md" variant="secondary">
+          <LinkButton
+            size="md"
+            variant="secondary"
+            href="mailto:info@klub-ada.si"
+            isExternal
+            showIcon
+          >
             {"Postani partner"}
-          </Button>
+          </LinkButton>
         </div>
       </div>
     </PageWrapper>

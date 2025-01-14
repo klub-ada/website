@@ -6,7 +6,10 @@ import Image from "next/image";
 export function Statistics() {
   return (
     <PageWrapper>
-      <div className="flex flex-col pb-10 md:pb-20 px-8 md:px-16 gap-6 items-center">
+      <div
+        id="become-partner"
+        className="flex flex-col pb-10 md:pb-20 px-8 md:px-16 gap-6 items-center"
+      >
         <Image
           src="/assets/heart.svg"
           width={50}

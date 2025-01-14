@@ -23,7 +23,7 @@ export default async function Team() {
 
   return (
     <PageWrapper>
-      <div className="flex flex-col gap-6 md:gap-12">
+      <div id="team" className="flex flex-col gap-6 md:gap-12">
         <div className="flex items-center gap-2">
           <Heading size="xl">{"Naša"}</Heading>
           <Image

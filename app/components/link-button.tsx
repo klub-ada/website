@@ -20,7 +20,7 @@ const linkButtonBase = tv({
 
 type ButtonLinkComponent = ForwardRefComponent<
   "a",
-  LinkOptions & Pick<ButtonOptions, "size" | "variant">
+  LinkOptions & Pick<ButtonOptions, "size" | "variant"> & { showIcon?: boolean }
 >;
 export type ButtonLinkProps = PropsOf<ButtonLinkComponent>;
 
@@ -32,7 +32,7 @@ export const LinkButton = forwardRef(
       isExternal = false,
       size = "md",
       variant = "primary",
-      showIcon = true,
+      showIcon = false,
       ...restProps
     },
     forwardedRef

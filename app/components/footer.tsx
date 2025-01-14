@@ -21,7 +21,8 @@ export function Footer() {
                     label="Pridruži se Discord skupini"
                     color="yellow"
                     description="Varen prostor za izmenjavo idej, dogodkov, zaposlitev in priložnosti za osebni in karierni razvoj."
-                    href="/"
+                    href="https://forms.gle/iRmFfg7Amn3YchM2A"
+                    isExternal
                   />
                 </div>
                 <div className="basis-4/12">
@@ -54,12 +55,14 @@ export function Footer() {
         </div>
         <div className="flex flex-col-reverse gap-10 md:flex-row px-7 py-16 md:px-14 bg-beige justify-between">
           <div className="flex flex-col gap-4">
-            <Image
-              src="/assets/klub-ada-logo.svg"
-              width={80}
-              height={50}
-              alt="Klub Ada logo"
-            />
+            <a href="/" rel="noopener noreferrer">
+              <Image
+                src="/assets/klub-ada-logo.svg"
+                width={80}
+                height={50}
+                alt="Klub Ada logo"
+              />
+            </a>
             <Paragraph size="sm">{"info@klub-ada.si"}</Paragraph>
           </div>
           <div className="flex flex-col md:flex-row gap-10 lg:gap-24">

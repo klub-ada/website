@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Button } from "./button";
 import { Link } from "./link";
 import { NavbarMenu } from "./navbar-menu";
+import { LinkButton } from "./link-button";
 
 export function Navbar() {
   return (
@@ -44,9 +44,9 @@ export function Navbar() {
         </li>
       </ol>
       <div className="hidden md:block">
-        <Button size="md" href="/dogodki">
+        <LinkButton size="md" href="/dogodki">
           Vsi dogodki
-        </Button>
+        </LinkButton>
       </div>
       <NavbarMenu />
     </nav>
