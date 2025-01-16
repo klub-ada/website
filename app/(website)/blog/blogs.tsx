@@ -6,6 +6,7 @@ import { client } from "@/sanity/lib/client";
 import PostComponent from "@/app/components/post-component";
 import { NewsletterComponent } from "@/app/components/newsletter-component";
 import Image from "next/image";
+import { Filters } from "./filters";
 
 async function getPosts() {
   const query = `*[_type == "post"] | order(pinned asc) {
@@ -45,6 +46,10 @@ export default async function Blogs() {
             "Preberi povzetke dogodkov, uporabne nasvete za iskanje službe, priprava na tehnični intervju, predlogi knjig in še več."
           }
         </Paragraph>
+        <Filters
+        // selectedCategory={selectedCategory}
+        // setSelectedCategory={setSelectedCategory}
+        />
       </div>
       {/* First 3 posts */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
