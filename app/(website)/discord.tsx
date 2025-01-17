@@ -14,10 +14,10 @@ export function Discord() {
             <div className="h-full lg:basis-3/5">
               <Image
                 src="/assets/discord-image.png"
-                width={730}
-                height={600}
+                width={1000}
+                height={1000}
                 alt="Discord Image"
-                className="w-full object-cover rounded-2xl"
+                className="w-full max-h-4/5 object-cover rounded-2xl"
               />
             </div>
             <div className="flex flex-col justify-start gap-4 grow basis-2/5">

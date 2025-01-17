@@ -18,7 +18,7 @@ export function Logos() {
     },
     {
       id: "logo-3",
-      src: "/assets/fri-logo.png",
+      src: "/assets/FRI-logo.png",
       href: "https://fri.uni-lj.si/sl",
       alt: "FRI logo",
     },
@@ -28,7 +28,7 @@ export function Logos() {
     <PageWrapper>
       <div className="flex flex-col items-center text-center gap-6 md:gap-12">
         <Heading size="xs">{"Hvala podjetjem, ki nas podpirajo:"}</Heading>
-        <div className="flex justify-between items-center gap-8 md:gap-24">
+        <div className="flex justify-between items-center gap-8 md:gap-28">
           {logos.map((logo) => (
             <a
               href={logo.href}
