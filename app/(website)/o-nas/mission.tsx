@@ -4,8 +4,6 @@ import { Heading } from "@/app/components/heading";
 import { PageWrapper } from "@/app/components/page-wrapper";
 import { Paragraph } from "@/app/components/paragraph";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
 
 export function Mission() {
   /* Section Data */
@@ -32,30 +30,6 @@ export function Mission() {
       image: "/assets/ada-name.png",
     },
   ];
-
-  /* State and Refs */
-  const [activeIndex, setActiveIndex] = useState(0);
-  const { scrollY } = useScroll();
-  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  /* Scroll Detection */
-  useEffect(() => {
-    const handleScroll = () => {
-      const newActiveIndex = sectionRefs.current.findIndex((ref) => {
-        if (!ref) return false;
-        const rect = ref.getBoundingClientRect();
-        return (
-          rect.top <= window.innerHeight / 2 &&
-          rect.bottom >= window.innerHeight / 2
-        );
-      });
-      if (newActiveIndex !== -1 && newActiveIndex !== activeIndex) {
-        setActiveIndex(newActiveIndex);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [activeIndex]);
 
   return (
     <PageWrapper hasNoBottomPadding hasNoTopPadding>
