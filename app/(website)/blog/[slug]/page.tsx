@@ -10,11 +10,9 @@ import { PortableText, PortableTextComponents } from "next-sanity";
 import React from "react";
 import { formatDate } from "@/app/utils/date";
 
-interface Params {
-  params: {
-    slug: string;
-  };
-}
+type Params = Promise<{
+  slug: string;
+}>;
 async function getPost(slug: string) {
   const query = `*[_type == "post" && slug.current == $slug][0] {
   title,
@@ -35,8 +33,9 @@ async function getPost(slug: string) {
 }
 
 // Blog Article Component
-const BlogArticle = async ({ params }: Params) => {
-  const post: Post = await getPost(params.slug);
+const BlogArticle = async (props: { params: Params }) => {
+  const { slug } = await props.params;
+  const post: Post = await getPost(slug);
   const imageSrc = imageLoader(post.mainImage);
   const formattedDate = formatDate(post.publishedAt);
 
