@@ -1,6 +1,4 @@
-"use client";
 import clsx from "clsx";
-import { useState } from "react";
 
 type FilterProps = {
   isSelected: boolean;
@@ -21,15 +19,14 @@ function Filter({ isSelected, label, handleSelectFilter }: FilterProps) {
   );
 }
 
-// type FiltersProps = {
-//   selectedCategory: string;
-//   setSelectedCategory: (category: string) => void;
-// };
-export function Filters(/*{
+type FiltersProps = {
+  selectedCategory: string;
+  setSelectedCategoryAction: (category: string) => void;
+};
+export function Filters({
   selectedCategory,
-  setSelectedCategory,
-}: FiltersProps*/) {
-  const [selectedCategory, setSelectedCategory] = useState("Vse");
+  setSelectedCategoryAction,
+}: FiltersProps) {
   const FILTERS = [
     "Vse",
     "Iskanje službe",
@@ -45,7 +42,7 @@ export function Filters(/*{
           key={filter}
           label={filter}
           isSelected={selectedCategory === filter}
-          handleSelectFilter={() => setSelectedCategory(filter)}
+          handleSelectFilter={() => setSelectedCategoryAction(filter)}
         />
       ))}
     </div>

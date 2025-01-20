@@ -6,10 +6,11 @@ import { client } from "@/sanity/lib/client";
 import PostComponent from "@/app/components/post-component";
 import { NewsletterComponent } from "@/app/components/newsletter-component";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { Filters } from "./filters";
 
-async function getPosts() {
-  const query = `*[_type == "post"] | order(pinned asc) {
+async function getPosts(categoryId?: string) {
+  const query = `*[_type == "post" && $categoryId in categories[].title] | order(pinned asc) {
   title,
   slug,
   mainImage,
@@ -19,12 +20,26 @@ async function getPosts() {
     title,
   }
 }`;
-  const data = await client.fetch(query);
+  const data = await client.fetch(query, { categoryId });
   return data;
 }
 
-export default async function Blogs() {
-  const posts: Post[] = await getPosts();
+export default function Blogs() {
+  const [selectedCategory, setSelectedCategory] = useState("Vse");
+  const [posts, setPosts] = useState<Post[]>([]);
+  console.log(selectedCategory);
+
+  console.log(posts);
+  useEffect(() => {
+    const asyncFn = async () => {
+      const data = await getPosts(
+        selectedCategory !== "Vse" ? selectedCategory : undefined
+      );
+      setPosts(data);
+    };
+    asyncFn();
+  }, []);
+  // const posts: Post[] = await getPosts(selectedCategory);
 
   return (
     <PageWrapper>
@@ -47,8 +62,10 @@ export default async function Blogs() {
           }
         </Paragraph>
         <Filters
-        // selectedCategory={selectedCategory}
-        // setSelectedCategory={setSelectedCategory}
+          selectedCategory={selectedCategory}
+          setSelectedCategoryAction={(category: string) =>
+            setSelectedCategory(category)
+          }
         />
       </div>
       {/* First 3 posts */}
